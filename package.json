@@ -1,0 +1,22 @@
+{
+  "name": "jogga-website",
+  "version": "0.0.0",
+  "description": "Jogga's personal site",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jogga/jogga-website.git"
+  },
+  "keywords": [
+    "portfolio",
+    "hugo",
+    "hugo-site"
+  ],
+  "author": "Joachim Fröstl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jogga/jogga-website/issues"
+  },
+  "homepage": "https://jogga.co"
+}
