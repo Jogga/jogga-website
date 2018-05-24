@@ -1,4 +1,5 @@
-baseURL = "http://example.org/"
+baseURL = "https://jogga.co/"
 languageCode = "en-us"
-title = "My New Hugo Site"
-ignoreFiles = ["README.md"]
+title = "Jogga"
+ignoreFiles = ["README.md", "LICENSE", "LICENSE.md", "content/static/*"]
+staticDir = ["static", "content/static"]
