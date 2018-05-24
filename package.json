@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "Jogga's personal site",
   "scripts": {
-    "build-task:scss-compile": "node-sass --source-map true src/scss/ -o static/css"
+    "scss": "node-sass src/**/*.scss -o static/css",
+    "scss:watch": "npm run scss && node-sass src/**/*.scss -wo static/css"
   },
   "repository": {
     "type": "git",

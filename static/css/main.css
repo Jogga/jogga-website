@@ -1,4 +1,6 @@
 body {
-  color: #333; }
+  background-color: #f7f7f7; }
 
-/*# sourceMappingURL=main.css.map */
+body {
+  color: #333;
+  font-family: sans-serif; }

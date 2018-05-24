@@ -1,5 +1,8 @@
+@import 'test';
+
 $primary-color: #333;
 
 body {
     color: $primary-color;
+    font-family: sans-serif;
 }
