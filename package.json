@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "description": "Jogga's personal site",
   "scripts": {
-    "scss": "node-sass src/**/*.scss -o static/css",
-    "scss:watch": "npm run scss && node-sass src/**/*.scss -wo static/css"
+    "scss:build": "node-sass -r --output-style compressed src/scss -o static/css",
+    "scss:dev": "npm run scss:build && npm run scss:build -- -w",
+    "hugo": "hugo",
+    "hugo:dev": "hugo server -D",
+    "dev": "concurrently --kill-others \"npm run scss:dev\" \"npm run hugo:dev\""
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
   },
   "homepage": "https://jogga.co",
   "dependencies": {
+    "concurrently": "^3.5.1",
     "node-sass": "^4.9.0"
   }
 }
