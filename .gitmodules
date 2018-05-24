@@ -1,0 +1,4 @@
+[submodule "content"]
+	path = content
+	url = git@github.com:Jogga/jogga-website-content.git
+	branch = master
