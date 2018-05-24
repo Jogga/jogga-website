@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Jogga's personal site",
   "scripts": {
+    "build-task:scss-compile": "node-sass --source-map true src/scss/ -o static/css"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Jogga/jogga-website/issues"
   },
-  "homepage": "https://jogga.co"
+  "homepage": "https://jogga.co",
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  }
 }
