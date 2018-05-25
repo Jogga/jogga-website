@@ -1,5 +1,0 @@
-baseURL = "https://jogga.co/"
-languageCode = "en-us"
-title = "Jogga"
-ignoreFiles = ["README.md", "LICENSE", "LICENSE.md", "content/static/*"]
-staticDir = ["static", "content/static"]
