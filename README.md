@@ -7,7 +7,7 @@ My personal site
 The website's content is tracked in a seperate repository, integrated as a git submodule. To update the submodule run: `git submodule update --remote --rebase`. After that you will have to commit the changes that occurred in the submodule. For convenience use the update content package script.
 
 ### Package Scripts 
-For a complete list of the package scripts, have a look at the scripts in package.json. The two most important scripts are listed below.
+For a complete list of the package scripts, have a look at the scripts in package.json. The most important scripts are listed below.
 
 #### Build
 ```
