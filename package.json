@@ -7,20 +7,18 @@
     "scss:build-dev": "node-sass -r --source-map true --output-style expanded src/scss -o static/css",
     "scss:watch": "npm run scss:build-dev && npm run scss:build-dev -- -w",
     "scss:clean": "rm -rf ./static/css/",
-    
     "hugo:build": "hugo",
     "hugo:build-drafts": "hugo -D",
     "hugo:serve": "hugo server",
     "hugo:serve-drafts": "hugo server -D",
     "hugo:clean": "rm -rf ./public",
-    
     "clean": "npm run scss:clean && npm run hugo:clean",
     "dev-drafts": "concurrently --kill-others \"npm run scss:watch\" \"npm run hugo:serve-drafts\"",
     "dev": "concurrently --kill others \"npm run scss:watch\" \"npm run hugo:serve\"",
     "build-drafts": "npm run clean && npm run scss:build && npm run hugo:build-drafts",
-    "build": "npm run clean && npm run scss:build && npm run hugo:build",
-    
-    "content:update": "git submodule update --remote --rebase && git add ./content && git commit -m\"Update content submodule\""
+    "build": "npm run clean && npm run scss:build && npm run hugo:build && npm run beautify",
+    "content:update": "git submodule update --remote --rebase && git add ./content && git commit -m\"Update content submodule\"",
+    "beautify": "find ./public -type f -name \"*.html\" -exec js-beautify -f {} -r --type \"html\" -m 0 --no-preserve-newlines \\;"
   },
   "repository": {
     "type": "git",
@@ -39,6 +37,7 @@
   "homepage": "https://jogga.co",
   "dependencies": {
     "concurrently": "^3.5.1",
+    "js-beautify": "^1.7.5",
     "node-sass": "^4.9.0"
   }
 }

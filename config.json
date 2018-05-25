@@ -10,9 +10,18 @@
     "title": "Jogga",
     "baseurl": "https://jogga.co/",
     "languageCode": "en-us",
-    "canonifyurls": true,
+    "canonifyurls": false,
     "permalinks": {
-        "post": ":year/:month/:day/:title",
+        "blog": "blog/:year/:month/:title/",
+        "work": "work/:title/",
         "fixed": ":title/"
-    }
+    },
+    "taxonomies": {
+        "tag": "tags"
+    },
+    "blackfriday": {
+        "extensionsmask": []
+    },
+    "disableHugoGeneratorInject": true,
+    "enableEmoji": true
 }
