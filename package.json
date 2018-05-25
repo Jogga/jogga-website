@@ -3,11 +3,18 @@
   "version": "0.0.0",
   "description": "Jogga's personal site",
   "scripts": {
-    "scss:build": "node-sass -r --output-style compressed src/scss -o static/css",
-    "scss:dev": "npm run scss:build && npm run scss:build -- -w",
-    "hugo": "hugo",
-    "hugo:dev": "hugo server -D",
-    "dev": "concurrently --kill-others \"npm run scss:dev\" \"npm run hugo:dev\""
+    "scss:build": "node-sass -r --output-style compressed --source-comments false src/scss -o static/css",
+    "scss:build-dev": "node-sass -r --source-map true --output-style expanded src/scss -o static/css",
+    "scss:watch": "npm run scss:build-dev && npm run scss:build-dev -- -w",
+    "scss:clean": "rm -rf ./static/css/",
+    "hugo:build": "hugo",
+    "hugo:build-drafts": "hugo -D",
+    "hugo:serve": "hugo server",
+    "hugo:serve-drafts": "hugo server -D",
+    "hugo:clean": "rm -rf ./public",
+    "dev-drafts": "concurrently --kill-others \"npm run scss:watch\" \"npm run hugo:serve-drafts\"",
+    "dev": "concurrently --kill others \"npm run scss:watch\" \"npm run hugo:serve\"",
+    "build": "npm run scss:clean && npm run scss:build && npm run hugo:clean && npm run hugo:build"
   },
   "repository": {
     "type": "git",
