@@ -14,7 +14,9 @@
     "hugo:clean": "rm -rf ./public",
     "dev-drafts": "concurrently --kill-others \"npm run scss:watch\" \"npm run hugo:serve-drafts\"",
     "dev": "concurrently --kill others \"npm run scss:watch\" \"npm run hugo:serve\"",
-    "build": "npm run scss:clean && npm run scss:build && npm run hugo:clean && npm run hugo:build"
+    "build-drafts": "npm run scss:clean && npm run scss:build && npm run hugo:clean && npm run hugo:build-drafts",
+    "build": "npm run scss:clean && npm run scss:build && npm run hugo:clean && npm run hugo:build",
+    "clean": "npm run scss:clean && npm run hugo:clean"
   },
   "repository": {
     "type": "git",
