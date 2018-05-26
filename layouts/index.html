@@ -1,0 +1,42 @@
+{{ define "main" }}
+    <header>
+        <h1>Joachim Fröstl Product Designer</h1>
+        <p>...</p>
+        <button>work with me</button>
+    </header>
+    <section>
+        <h2>A design process</h2>
+        <p>...</p>
+        <div>
+            <h3>Observe</h3>
+            <p>...</p>
+        </div>
+        <div>
+            <h3>Reflect</h3>
+            <p>...</p>
+        </div>
+        <div>
+            <h3>Make</h3>
+            <p>...</p>
+        </div>
+    </section>
+    <section>
+        <h2>Select work</h2>
+        <p>...</p>
+        {{ range where .Data.Pages "Section" "work" }}
+            {{ .Render "summary"}}
+        {{ end }}
+        <a href="/work">more work</a>
+    </section>
+    <section>
+        <h2>Notes and Essays</h2>
+        <p>...</p>
+        {{ range where .Data.Pages "Section" "blog" }}
+            {{ .Render "summary"}}
+        {{ end }}
+        <a href="/blog">more posts</a>
+    </section>
+    <section>
+        {{ partial "cta/call-to-action.html" . }}
+    </section>
+{{ end }}
