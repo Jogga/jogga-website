@@ -1,4 +1,4 @@
 <article>
     <a href="{{ .Permalink }}"><h3>{{ .Title }}</h3></a>
-    <h3>{{ .Date }}</h3>
+    <time>{{ .Date.Format "Jan 2, 2006" }}</time>
 </article>

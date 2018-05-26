@@ -22,12 +22,12 @@
     </section>
 
     {{ $cases := where .Site.RegularPages "Section" "work" }}
-    {{ if le 0 (len $cases)}}
+    {{ if le 0 (len $cases) }}
     <section>
         <h2>Select work</h2>
         <p>...</p>
-        {{ range  $index, $element := first .Site.Params.casesToPreview $cases }}
-            {{ $element.Render "summary"}}
+        {{ range first .Site.Params.casesToPreview ($cases.ByParam "project-end").Reverse }}
+            {{ .Render "summary" }}
         {{ end }}
         {{ if lt .Site.Params.casesToPreview (len $cases) }}
         <a href="/work">more work</a>
@@ -40,8 +40,8 @@
     <section>
         <h2>Notes and Essays</h2>
         <p>...</p>
-        {{ range first .Site.Params.postsToPreview $posts }}
-            {{ .Render "summary"}}
+        {{ range first .Site.Params.postsToPreview $posts.ByDate.Reverse }}
+            {{ .Render "summary" }}
         {{ end }}
         {{ if lt .Site.Params.postsToPreview (len $posts) }}
         <a href="/blog">more posts</a>
