@@ -16,6 +16,57 @@
         "work": "work/:title/",
         "fixed": ":title/"
     },
+    "menu": {
+        "main": [
+        ],
+        "footer": [
+            {
+                "identifier": "home",
+                "name": "Home",
+                "url": "/",
+                "weight": -10
+            }
+        ]
+    },
+    "params": {
+        "social": {
+            "twitter": {
+                "name": "Twitter",
+                "url": "https://twitter.com/joggaf",
+                "weight": 10
+            },
+            "github": {
+                "name": "Github",
+                "url": "https://github.com/jogga",
+                "weight": 20
+            },
+            "linkedin": {
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/jogga/",
+                "weight": 30
+            },
+            "dribbble": {
+                "name": "Dribbble",
+                "url": "https://dribbble.com/jogga",
+                "weight": 40
+            },
+            "instagram": {
+                "name": "Instagram",
+                "url": "https://www.instagram.com/joggaf/",
+                "weight": 50
+            },
+            "medium": {
+                "name": "Medium",
+                "url": "https://medium.com/@jogga",
+                "weight": 60
+            },
+            "facebook": {
+                "name": "Facebook",
+                "url": "https://www.facebook.com/joggaf",
+                "weight": 70
+            }
+        }
+    }, 
     "taxonomies": {
         "tag": "tags"
     },
@@ -24,10 +75,5 @@
     },
     "pygmentsUseClasses": true,
     "disableHugoGeneratorInject": true,
-    "enableEmoji": true,
-
-    "params": {
-        "casesToPreview": 2,
-        "postsToPreview": 3
-    }
+    "enableEmoji": true
 }

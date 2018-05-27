@@ -1,53 +1,5 @@
 {{ define "main" }}
-    <header>
-        <h1>Joachim Fröstl Product Designer</h1>
-        <p>...</p>
-        <button>work with me</button>
-    </header>
-    <section>
-        <h2>A design process</h2>
-        <p>...</p>
-        <div>
-            <h3>Observe</h3>
-            <p>...</p>
-        </div>
-        <div>
-            <h3>Reflect</h3>
-            <p>...</p>
-        </div>
-        <div>
-            <h3>Make</h3>
-            <p>...</p>
-        </div>
-    </section>
-
-    {{ $cases := where .Site.RegularPages "Section" "work" }}
-    {{ if le 0 (len $cases) }}
-    <section>
-        <h2>Select work</h2>
-        <p>...</p>
-        {{ range first .Site.Params.casesToPreview ($cases.ByParam "project-end").Reverse }}
-            {{ .Render "summary" }}
-        {{ end }}
-        {{ if lt .Site.Params.casesToPreview (len $cases) }}
-        <a href="/work">more work</a>
-        {{ end }}
-    </section>
-    {{ end }}
-
-    {{ $posts := where .Site.RegularPages "Section" "blog" }}
-    {{ if le 0 (len $posts) }}
-    <section>
-        <h2>Notes and Essays</h2>
-        <p>...</p>
-        {{ range first .Site.Params.postsToPreview $posts.ByDate.Reverse }}
-            {{ .Render "summary" }}
-        {{ end }}
-        {{ if lt .Site.Params.postsToPreview (len $posts) }}
-        <a href="/blog">more posts</a>
-        {{ end }}
-    </section>
-    {{ end }}
+{{- .Content -}}
     <section>
         {{ partial "cta/call-to-action.html" . }}
     </section>

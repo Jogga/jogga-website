@@ -15,9 +15,8 @@
 {{ end }}
 </head>
 <body>
-    {{ block "main" . }}
-
-    {{ end }}
-    {{ partial "footer/site-footer.html" . }}
+{{ partial "header/nav.html" . }}
+{{ block "main" . }}{{ end }}
+{{ partial "footer/footer.html" . }}
 </body>
 </html>

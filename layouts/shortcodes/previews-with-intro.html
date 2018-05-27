@@ -1,0 +1,22 @@
+{{ $section := .Get "section" }}
+{{ $count := int (.Get "count") }}
+{{ $pages := where .Site.RegularPages "Section" $section }}
+{{- if le 0 (len $pages) -}}
+<section>
+    <div{{ if isset .Params "introClasses" }} class="klasse-echt"{{ end }}>
+        {{ .Inner }}
+    </div>
+    {{ range first $count $pages.ByDate.Reverse }}
+        {{ .Render "summary" }}
+    {{ end }}
+    {{ if lt $count (len $pages) }}
+    <a href="/{{ $section }}">
+        {{- if isset .Params "moreLabel" -}} 
+        {{- .Get "moreLabel" -}}
+        {{- else -}} 
+        Show more
+        {{- end -}}
+    </a>
+    {{ end }}
+</section>
+{{- end -}}

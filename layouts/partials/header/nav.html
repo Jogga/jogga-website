@@ -1,0 +1,18 @@
+<nav class="sidebar-nav" id="top">
+{{ $currentPage := . }}
+<a href="/" title="home">
+    <img src="/img/jogga.png" alt="hugo">
+</a>
+<ul>
+    {{ range .Site.Menus.main }}
+    <li>
+        <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">
+            {{- .Name -}}
+        </a>
+    </li>
+    {{ end }}
+    <li>
+        <a class="sidebar-nav-item" href="mailto:alf@alf.alf" title="Contact">Contact</a>
+    </li>
+</ul>
+</nav>
