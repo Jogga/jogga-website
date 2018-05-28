@@ -32,44 +32,75 @@
         "social": {
             "twitter": {
                 "name": "Twitter",
+                "handle": "joggaf",
                 "url": "https://twitter.com/joggaf",
                 "weight": 10
             },
             "github": {
                 "name": "Github",
+                "handle": "jogga",
                 "url": "https://github.com/jogga",
                 "weight": 20
             },
             "linkedin": {
                 "name": "LinkedIn",
+                "handle": "jogga",
                 "url": "https://linkedin.com/in/jogga/",
                 "weight": 30
             },
             "dribbble": {
                 "name": "Dribbble",
+                "handle": "jogga",
                 "url": "https://dribbble.com/jogga",
                 "weight": 40
             },
             "instagram": {
                 "name": "Instagram",
+                "handle": "joggaf",
                 "url": "https://www.instagram.com/joggaf/",
                 "weight": 50
             },
             "medium": {
                 "name": "Medium",
+                "handle": "jogga",
                 "url": "https://medium.com/@jogga",
                 "weight": 60
             },
             "facebook": {
                 "name": "Facebook",
+                "handle": "joggaf",
                 "url": "https://www.facebook.com/joggaf",
                 "weight": 70
             }
         },
         "contact": {
+            "name": {
+                "first": "Joachim",
+                "middle": "Bernhard",
+                "last": "Fröstl"
+            },
+            "address": {
+                "street": "Enhuberstraße",
+                "house": "3A",
+                "city": "Munich",
+                "zipCode": "80333",
+                "country": "Germany"
+            },
             "email": "uryyb@wbttn.co",
             "phone": "+49 176 85087735"
-        }
+        },
+        "keywords": [
+            "design", 
+            "product design", 
+            "usability", 
+            "human centered design", 
+            "ux design", 
+            "ui design", 
+            "fröstl", 
+            "froestl", 
+            "joachim", 
+            "joggaf", 
+            "jogga"]
     }, 
     "taxonomies": {
         "tag": "tags"
