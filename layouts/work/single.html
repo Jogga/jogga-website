@@ -1,0 +1,12 @@
+{{ define "main" }}
+{{ $startDate := dateFormat "2006" (.Page.Param "project-start") }}
+{{ $endDate := dateFormat "2006" (.Page.Param "project-end") }}
+<time>
+    {{- if eq $startDate $endDate -}}
+    {{- $endDate -}}
+    {{- else -}}
+    {{- $startDate -}}-{{- $endDate -}}
+    {{- end -}}
+</time>
+{{ .Content }}
+{{ end }}
