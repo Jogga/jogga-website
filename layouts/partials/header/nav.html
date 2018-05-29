@@ -11,8 +11,13 @@
         </a>
     </li>
     {{ end }}
-    <li>
-        <a class="sidebar-nav-item" href="" title="Contact">Contact</a>
+    <li class="h-hide">
+        <a class="js-cipher-email js-cipher-mailto" href="mailto:{{- .Site.Params.contact.email -}}" title="Contact">Contact</a>
     </li>
+    <noscript>
+        <li>
+            <a href="mailto:{{- .Site.Params.contact.gmail -}}">Contact</a>
+        </li>
+    </noscript>
 </ul>
 </nav>
