@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "jogga-production"
+    "default": "jogga-production",
+    "staging": "jogga-staging",
+    "production": "jogga-production"
   }
 }
