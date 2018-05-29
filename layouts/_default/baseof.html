@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <title>{{ .Title }}</title>
     <meta name="description" content="{{ .Description }}">
-    <meta name="keywords" content="{{delimit .Site.Params.keywords ", " }}">
-    <meta name="autor" content="{{ .Site.Params.contact.name.first}} {{ .Site.Params.contact.name.last}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="all">
-
     <link rel="stylesheet" href="/css/main.css">
+    <meta name="autor" content="{{ .Site.Params.contact.name.first}} {{ .Site.Params.contact.name.last}}">
+    <meta name="keywords" content="{{delimit .Site.Params.keywords ", " }}">
     {{ block "meta-social" . }}
     {{ partial "head/meta-twitter.html" . }}
     {{ partial "head/meta-facebook.html" . }}
@@ -28,6 +25,6 @@
 {{ partial "header/nav.html" . }}
 {{ block "main" . }}{{ end }}
 {{ partial "footer/footer.html" . }}
-<script type="text/javascript" src="/js/main.js" async></script>
+    <script type="text/javascript" src="/js/main.js" async></script>
 </body>
 </html>
