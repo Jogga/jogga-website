@@ -17,7 +17,7 @@ function cipherMail(mail) {
 }
 
 function cipherPhone(phone) {
-	return phone.replace(/\d\d\d\d\d$/g, rot5);
+	return phone.replace(/\d\d\d\d$|\d\d\d\d(?=<)/g, rot5);
 }
 
 

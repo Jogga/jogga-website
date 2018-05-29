@@ -1,4 +1,5 @@
 import cipher from './cipher';
+import hideShow from './hideShow';
 
 // Add smooth scrolling if available
 if ("scrollTo" in window) {
@@ -16,25 +17,33 @@ if ("scrollTo" in window) {
 }
 
 // Decipher mailto
-var emailLinks = document.getElementsByClassName('cipher-mailto');
+var emailLinks = document.getElementsByClassName('js-cipher-mailto');
 for(var i = 0; i < emailLinks.length; i++) {
-    emailLinks[i].setAttribute("href", cipher.cipherMail(emailLinks[i].getAttribute("href")));
+    var link = emailLinks[i];
+    link.setAttribute("href", cipher.cipherMail(link.getAttribute("href")));
+    hideShow.show(link, 1);
 }
 
 // Decipher email
-var emailElements = document.getElementsByClassName('cipher-mail');
+var emailElements = document.getElementsByClassName('js-cipher-mail');
 for(var i = 0; i < emailElements.length; i++) {
-    emailElements[i].innerHTML = cipher.cipherMail(emailElements[i].innerHTML);
+    var element = emailElements[i];
+    element.innerHTML = cipher.cipherMail(element.innerHTML);
+    hideShow.show(element, 1);
 }
 
 // Decipher tel
-var telLinks = document.getElementsByClassName('cipher-tel');
+var telLinks = document.getElementsByClassName('js-cipher-tel');
 for(var i = 0; i < telLinks.length; i++) {
-    telLinks[i].setAttribute("href", cipher.cipherPhone(telLinks[i].getAttribute("href")));
+    var link = telLinks[i];
+    link.setAttribute("href", cipher.cipherPhone(link.getAttribute("href")));
+    hideShow.show(link, 1);
 }
 
 // Decipher phone
-var phoneElements = document.getElementsByClassName('cipher-phone');
+var phoneElements = document.getElementsByClassName('js-cipher-phone');
 for(var i = 0; i < phoneElements.length; i++) {
-    phoneElements[i].innerHTML = cipher.cipherPhone(phoneElements[i].innerHTML);
+    var element = phoneElements[i];
+    element.innerHTML = cipher.cipherPhone(element.innerHTML);
+    hideShow.show(element, 1);
 }

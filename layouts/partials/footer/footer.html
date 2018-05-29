@@ -1,43 +1,45 @@
 <footer>
-    <a href="#top" class="scroll-top">scroll up</a>
-    <div>
-        <h4>Legal</h4>
-        <ul>
-            <li>© 2018 Joachim Fröstl</li>
-            <noscript>To fend off spammers, my contact is in ciphers. With javascript disabled, you will need to decipher my contact manuall. Use rot13 for name and tld of my email. Use rot5 for the last eight digits of my number. <a href="https://cryptii.com/rot13">This</a> might be useful.</noscript>
-            <li><a class="cipher-mail cipher-mailto" href="mailto:{{- .Site.Params.contact.email -}}">{{- .Site.Params.contact.email -}}</a></li>
-            <li><a class="cipher-phone cipher-tel" href="tel:{{- .Site.Params.contact.phone -}}">{{- .Site.Params.contact.phone -}}</a></li>
-            {{ range .Site.Menus.legal }}
-            <li>
-                <a class="" href="{{ .URL }}" title="{{ .Title }}">
-                    {{- .Name -}}
-                </a>
-            </li>
-            {{ end }}
-        </ul>
-    </div>
-    <nav>
-        <h4>Social</h4>
-        <ul>
-            {{ range sort .Site.Params.social "weight" }}
-            <li>
-                <a href="{{ .url }}" title="{{ .name }}">
-                    {{- .name -}}
-                </a>
-            </li>
-            {{ end }}
-        </ul>
-    </nav>
-    <nav>
-        <h4>Jump to</h4>
-        <ul>
-            {{ range .Site.Menus.footer }}
-            <li>
-                <a class="" href="{{ .URL }}" title="{{ .Title }}">
-                    {{- .Name -}}
-                </a>
-            </li>
-            {{ end }}
-        </ul>
-    </nav>
+	<a href="#top" class="scroll-top">scroll up</a>
+	<div>
+		<h4>Legal</h4>
+		<ul>
+			<li>© 2018 Joachim Fröstl</li>
+			<noscript>
+				<li><a href="mailto:{{- .Site.Params.contact.gmail -}}">{{- .Site.Params.contact.gmail -}}</a></li>
+			</noscript>
+			<li class="h-hide"><a class="js-cipher-mail js-cipher-mailto" href="mailto:{{- .Site.Params.contact.email -}}">{{- .Site.Params.contact.email -}}</a></li>
+			<li class="h-hide"><a class="js-cipher-phone js-cipher-tel" href="tel:{{- .Site.Params.contact.phone -}}">{{- .Site.Params.contact.phone -}}</a></li>
+			{{ range .Site.Menus.legal }}
+			<li>
+				<a class="" href="{{ .URL }}" title="{{ .Title }}">
+					{{- .Name -}}
+				</a>
+			</li>
+			{{ end }}
+		</ul>
+	</div>
+	<nav>
+		<h4>Social</h4>
+		<ul>
+			{{ range sort .Site.Params.social "weight" }}
+			<li>
+				<a href="{{ .url }}" title="{{ .name }}">
+					{{- .name -}}
+				</a>
+			</li>
+			{{ end }}
+		</ul>
+	</nav>
+	<nav>
+		<h4>Jump to</h4>
+		<ul>
+			{{ range .Site.Menus.footer }}
+			<li>
+				<a class="" href="{{ .URL }}" title="{{ .Title }}">
+					{{- .Name -}}
+				</a>
+			</li>
+			{{ end }}
+		</ul>
+	</nav>
 </footer>
