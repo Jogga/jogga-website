@@ -24,9 +24,10 @@
     {{ block "head" . }}
     {{- end -}}
 </head>
-<body>
+<body id="parent">
 {{ partial "header/nav.html" . }}
 {{ block "main" . }}{{ end }}
 {{ partial "footer/footer.html" . }}
+<script type="text/javascript" src="/js/main.js" async></script>
 </body>
 </html>
