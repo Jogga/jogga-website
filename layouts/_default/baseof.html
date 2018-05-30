@@ -22,9 +22,11 @@
     {{- end -}}
 </head>
 <body>
-{{ partial "header/nav.html" . }}
-{{ block "main" . }}{{ end }}
-{{ partial "footer/footer.html" . }}
-    <script type="text/javascript" src="/js/main.js" async></script>
+    <main>
+        {{ partial "header/nav.html" . }}
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer/footer.html" . }}
+    {{ partial "scripts.html" }}
 </body>
 </html>
