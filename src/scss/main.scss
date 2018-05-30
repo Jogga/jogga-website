@@ -1,5 +1,5 @@
 @import "constants";
-@import "grid";
+@import "h-visibility";
 @import "h-sections";
 @import "h-grid";
 @import "section-intro";
@@ -10,10 +10,6 @@
 @import "c-summary-post";
 @import "c-navigation";
 @import "c-footer";
-
-.h-hide {
-    display: none;
-}
 
 body {
     margin: 0;
