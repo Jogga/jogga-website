@@ -1,33 +1,35 @@
+.summary {
+    @include content-section;
+}
 @media screen and (min-width: $break-point-m){
-    .summary-section {
+    .summary {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
-        grid-column-gap: $grid-gap;
-        column-gap: $grid-gap;
+        @include grid-column-gap;
         grid-template-areas: 
             "intro intro ."
             "list list list"
             ". more ."
     }
 
-    .summary-section__intro {
+    .summary__intro {
         grid-area: intro;
     }
 
-    .summary-section__more {
+    .summary__more {
         grid-area: more;
         justify-self: center;
     }
 
-    .summary-section__list {
+    .summary__list {
         grid-area: list;
     }
 }
 
-.summary-section__list {
+.summary__list {
     padding: 0;
 }
-.summary-section__list-element {
+.summary__list-element {
     list-style-type: none;
 }

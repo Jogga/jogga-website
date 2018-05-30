@@ -1,15 +1,21 @@
 @import "constants";
 @import "grid";
-@import "summary-section";
-@import "case-summary";
-@import "page-summary";
-@import "call-to-action";
+@import "h-sections";
+@import "h-grid";
+@import "section-intro";
+@import "section-approach";
+@import "section-summary";
+@import "section-cta";
+@import "c-summary-case";
+@import "c-summary-post";
+@import "c-navigation";
+@import "c-footer";
 
 .h-hide {
     display: none;
 }
 
 body {
-    max-width: 1244px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
 }

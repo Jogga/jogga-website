@@ -1,0 +1,42 @@
+.footer {
+    @include content-section;
+}
+
+@media screen and (min-width: $break-point-s) {
+    .footer {
+        display: grid;
+        @include grid-column-gap;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "scroll scroll" 
+            "sitemap social" 
+            "legal .";
+    }
+    .footer__column--social {
+        grid-area: social;
+    }
+    .footer__column--legal {
+        grid-area: legal;
+    }
+    .footer__column--sitemap {
+        grid-area: sitemap;
+    }
+    .footer__column--scroll {
+        grid-area: scroll;
+    }
+}
+@media screen and (min-width: $break-point-m) {
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "scroll scroll scroll"
+            "legal social sitemap";
+    }
+}
+@media screen and (min-width: $break-point-l) {
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "scroll scroll . . . . legal legal social social sitemap sitemap";
+    }
+}

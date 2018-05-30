@@ -6,8 +6,7 @@
 @media screen and (min-width: $break-point-m) {
     .case-summary {
         display: grid;
-        grid-column-gap: $grid-gap;
-        column-gap: $grid-gap;
+        @include grid-column-gap;
         grid-template-rows: auto;
     }
     .case-summary--left {

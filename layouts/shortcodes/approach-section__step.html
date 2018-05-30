@@ -1,0 +1,7 @@
+{{ $step := .Get "step" }}
+<div class="approach__step approach__step--{{ $step }}">
+    <div class="approach__image">
+        <img src="/img/jogga.png" alt="{{ $step }}">
+    </div>
+    {{ .Inner }}
+</div>

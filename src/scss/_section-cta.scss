@@ -1,3 +1,7 @@
+.call-to-action-section {
+    @include content-section;
+}
+
 .call-to-action {
     background-color: $color-teal;
     text-align: center;

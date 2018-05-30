@@ -2,20 +2,20 @@
 {{ $count := int (.Get "count") }}
 {{ $pages := where .Site.RegularPages "Section" $section }}
 {{- if le 0 (len $pages) -}}
-<section class="summary-section">
-    <div class="summary-section__intro">
+<section class="summary">
+    <div class="summary__intro">
         {{ .Inner }}
     </div>
-    <ul class="summary-section__list">
+    <ul class="summary__list">
         {{ range $index, $element := (first $count $pages.ByDate.Reverse) }}
-            <li class="summary-section__list-element">
+            <li class="summary__list-element">
                 {{ .Scratch.Set "seciton-index" $index }}
                 {{ .Render "summary" "test" }}
             </li>
         {{ end }}
     </ul>
     {{ if lt $count (len $pages) }}
-    <a class="summary-section__more button button--tertiary" href="/{{ $section }}">
+    <a class="summary__more button button--tertiary" href="/{{ $section }}">
         {{- if isset .Params "moreLabel" -}} 
         {{- .Get "moreLabel" -}}
         {{- else -}} 

@@ -4,11 +4,11 @@
 {{ else }}
 <article class="case-summary case-summary--right">
 {{ end }}
+    <div class="case-summary__graphic"> 
+    </div>
     <div class="case-summary__description">
         <h3>{{ .Title }}</a></h3>
         <p>{{ .Description }}</p>
         <a href="{{ .Permalink }}">View case</a>
-    </div>
-    <div class="case-summary__graphic"> 
     </div>
 </article>

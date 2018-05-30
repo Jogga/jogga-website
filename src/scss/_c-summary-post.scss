@@ -1,15 +1,13 @@
 @media screen and (min-width: $break-point-m) {
     .page-summary {
         display: grid;
-        grid-column-gap: $grid-gap;
-        column-gap: $grid-gap;
-        grid-row-gap: 0;
-        row-gap: 0;
-        grid-template-columns: 1fr 1fr;
+        @include grid-column-gap;
+        @include grid-row-gap(0);
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            "headline body"
-            "footer body";
+            "headline body body"
+            "footer body body";
     }
     .page-summary__footer {
         grid-area: footer;
