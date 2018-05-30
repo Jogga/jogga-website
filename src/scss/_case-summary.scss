@@ -1,0 +1,26 @@
+.case-summary__graphic {
+    min-height: 50px;
+    background-color: $color-gray-light;
+}
+
+@media screen and (min-width: $break-point-m) {
+    .case-summary {
+        display: grid;
+        grid-column-gap: $grid-gap;
+        column-gap: $grid-gap;
+        grid-template-rows: auto;
+    }
+    .case-summary--left {
+        grid-template-columns: [description-start] 1fr 1fr [graphic-start] 1fr 1fr [description-end] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [graphic-end];
+    }
+    .case-summary--right {
+        grid-template-columns: [graphic-start] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [description-start] 1fr 1fr [graphic-end] 1fr 1fr [description-end];
+    }
+    .case-summary__graphic {
+        grid-area: graphic;
+    }
+    .case-summary__description {
+        z-index: 1;
+        grid-area: description;
+    }
+}

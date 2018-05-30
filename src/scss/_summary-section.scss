@@ -1,0 +1,33 @@
+@media screen and (min-width: $break-point-m){
+    .summary-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: $grid-gap;
+        column-gap: $grid-gap;
+        grid-template-areas: 
+            "intro intro ."
+            "list list list"
+            ". more ."
+    }
+
+    .summary-section__intro {
+        grid-area: intro;
+    }
+
+    .summary-section__more {
+        grid-area: more;
+        justify-self: center;
+    }
+
+    .summary-section__list {
+        grid-area: list;
+    }
+}
+
+.summary-section__list {
+    padding: 0;
+}
+.summary-section__list-element {
+    list-style-type: none;
+}

@@ -22,10 +22,7 @@
     {{- end -}}
 </head>
 <body>
-    <main>
-        {{ partial "header/nav.html" . }}
-        {{ block "main" . }}{{ end }}
-    </main>
+    {{ block "main" . }}{{ end }}
     {{ partial "footer/footer.html" . }}
     {{ partial "scripts.html" }}
 </body>

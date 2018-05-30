@@ -1,6 +1,10 @@
 {{ define "main" }}
-{{- .Content -}}
-    <section class="g g--s-c6 g--m-c12">
-        {{ partial "cta/call-to-action.html" . }}
-    </section>
+<main>
+    <header>
+        {{ partial "header/nav.html" . }}
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+    </header>
+    {{ .Content }}
+</main>
 {{ end }}

@@ -1,0 +1,12 @@
+<section class="call-to-action-section">
+    <div class="call-to-action">
+        {{ if .Inner }}
+            {{ .Inner }}
+        {{ else }}
+            <h2 class="call-to-action__head">Open for projects</h2>
+            <p class="call-to-action__body">I’m available from the {{ .Site.Params.availability }}. Let’s talk about how I can contribute to your team and product!</p>
+        {{ end }}
+        <a class="js-cipher-mailto call-to-action__button button button--primary" href="mailto:{{ .Site.Params.contact.email }}">{{ .Get "buttonLabel" }}</a>
+        <noscript><a href="mailto:{{ .Site.Params.contact.gmail }}" class="call-to-action__button button button--primary">{{ .Get "buttonLabel" }}</a></noscript>
+    </div>
+</section>

@@ -1,8 +1,6 @@
 <nav class="sidebar-nav" id="top">
 {{ $currentPage := . }}
-<a href="/" title="home">
-    <img src="/img/jogga.png" alt="hugo">
-</a>
+<a href="/" title="home"><img src="/img/jogga.png" alt="hugo"></a>
 <ul>
     {{ range .Site.Menus.main }}
     <li>
@@ -14,10 +12,6 @@
     <li class="h-hide">
         <a class="js-cipher-email js-cipher-mailto" href="mailto:{{- .Site.Params.contact.email -}}" title="Contact">Contact</a>
     </li>
-    <noscript>
-        <li>
-            <a href="mailto:{{- .Site.Params.contact.gmail -}}">Contact</a>
-        </li>
-    </noscript>
+    <noscript><li><a href="mailto:{{- .Site.Params.contact.gmail -}}">Contact</a></li></noscript>
 </ul>
 </nav>

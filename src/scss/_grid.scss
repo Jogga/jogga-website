@@ -1,9 +1,3 @@
-$grid-gap: 20px;
-$grid-columns: 12;
-$break-point-s: 360px;
-$break-point-m: 640px;
-$break-point-l: 800px;
-
 // .grid__item
 .g__i {
 	grid-column: auto;
@@ -39,8 +33,6 @@ $break-point-l: 800px;
 	display: grid;
 	grid-column-gap: $grid-gap;
 	column-gap: $grid-gap;
-	grid-row-gap: 0;
-	row-gap: 0; 
 	grid-auto-flow: row;
 }
 .g--xs-c3 {
@@ -119,6 +111,9 @@ $break-point-l: 800px;
 }
 @media screen and (min-width: $break-point-m) {
 	// Grid
+	.g--m-c3 {
+		grid-template-columns: repeat(3, [col] 1fr);
+	}
 	.g--m-c6 {
 		grid-template-columns: repeat(6, [col] 1fr);
 	}

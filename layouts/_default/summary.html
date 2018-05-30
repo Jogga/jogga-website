@@ -1,8 +1,8 @@
-<article class="g__i g__i--xs-sp3 g__i--m-sp12 g g--m-c12">
-    <footer class="g__i g__i--m-sp6-st1 g__i--m-rsp1-rst2 g__i--l-sp2-st1 g__i--l-ra">
+<article class="page-summary">
+    <footer class="page-summary__footer">
         <p><time>{{ .Date.Format "Jan 2, 2006" }}</time></p>
         <p>Tags</p>
     </footer>
-    <h3 class="g__i g__i--m-sp6-st1 g__i--m-rsp1-rst1 g__i--l-sp4-st3 g__i--l-ra"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    <p class="g__i g__i--m-sp6-st7 g__i--m-rsp2 g__i--l-ra">{{ .Description }}</p>
+    <h3 class="page-summary__headline"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <p class="page-summary__body">{{ .Description }}</p>
 </article>

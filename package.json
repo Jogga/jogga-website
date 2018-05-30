@@ -22,7 +22,7 @@
 
     "build:clean": "npm run scss:clean && npm run hugo:clean && npm run js:clean",
     "build:beautify": "find ./public -type f -name \"*.html\" -exec js-beautify -f {} -r --type \"html\" -m 0 --no-preserve-newlines \\;",
-    "build:drafts": "npm run build:clean && npm run scss:build && npm run js:build-dev && npm run hugo:build-drafts",
+    "build:drafts": "npm run build:clean && npm run scss:build && npm run js:build-dev && npm run hugo:build-drafts && npm run build:beautify",
     "build": "npm run build:clean && npm run scss:build && npm run js:build && npm run hugo:build && npm run build:beautify",
     
     "dev:drafts": "concurrently --kill-others \"npm run scss:watch\" \"npm run hugo:serve-drafts\" \"npm run js:watch\"",
