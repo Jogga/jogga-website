@@ -1,12 +1,14 @@
 .navigation {
-    @include content-section;
-    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
     display: flex;   
     justify-content: space-between;
     align-items: center;
 }
 
-.navigation__links {
+.navigation__list {
     justify-content: space-between;
     display: flex;
     flex-grow: 0.2;
@@ -16,5 +18,7 @@
 }
 
 .navigation__link {
+    display: block;
     padding: 10px 5px;
+    text-decoration: none;
 }

@@ -1,12 +1,13 @@
-<section class="call-to-action-section">
-    <div class="call-to-action">
+<section class="cta-section content-area">
+    <div class="cta">
+        <img src="" alt="rocket">
         {{ if .Inner }}
             {{ .Inner }}
         {{ else }}
-            <h2 class="call-to-action__head">Open for projects</h2>
-            <p class="call-to-action__body">I’m available from the {{ .Site.Params.availability }}. Let’s talk about how I can contribute to your team and product!</p>
+            <h4 class="cta__head">Open for projects</h4>
+            <p class="cta__body">I’m available from the {{ .Site.Params.availability }}. Let’s talk about how I can contribute to your team and product!</p>
         {{ end }}
-        <a class="js-cipher-mailto call-to-action__button button button--primary h-hide" href="mailto:{{ .Site.Params.contact.email }}">{{ .Get "buttonLabel" }}</a>
-        <noscript><a href="mailto:{{ .Site.Params.contact.gmail }}" class="call-to-action__button button button--primary">{{ .Get "buttonLabel" }}</a></noscript>
+        <a class="js-cipher-mailto cta__button button button--primary button--primary--on-teal h-hide" href="mailto:{{ .Site.Params.contact.email }}">{{ .Get "buttonLabel" }}</a>
+        <noscript><a href="mailto:{{ .Site.Params.contact.gmail }}" class="cta__button button button--primary button--primary--on-teal">{{ .Get "buttonLabel" }}</a></noscript>
     </div>
 </section>

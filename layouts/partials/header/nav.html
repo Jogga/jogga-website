@@ -1,16 +1,16 @@
-<nav class="navigation">
+<nav class="navigation content-area">
 {{ $currentPage := . }}
-    <a href="/" title="home"><img src="/img/jogga.png" alt="hugo"></a>
-    <ul class="navigation__links">
+    <a href="/" title="home">Jogga</a>
+    <ul class="navigation__list">
         {{ range .Site.Menus.main }}
-        <li class="navigation__link">
-            <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">
+        <li>
+            <a class="navigation__link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">
                 {{- .Name -}}
             </a>
         </li>
         {{ end }}
-        <li class="h-hide navigation__link">
-            <a class="js-cipher-email js-cipher-mailto" href="mailto:{{- .Site.Params.contact.email -}}" title="Contact">Contact</a>
+        <li class="h-hide">
+            <a class="navigation__link js-cipher-email js-cipher-mailto" href="mailto:{{- .Site.Params.contact.email -}}" title="Contact">Contact</a>
         </li>
         <noscript><li><a href="mailto:{{- .Site.Params.contact.gmail -}}">Contact</a></li></noscript>
     </ul>

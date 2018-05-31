@@ -1,8 +1,12 @@
-<article class="page-summary">
-    <footer class="page-summary__footer">
-        <p><time>{{ .Date.Format "Jan 2, 2006" }}</time></p>
-        <p>Tags</p>
+<article class="post-summary">
+    <footer class="summary-footer">
+        <time class="post-date">{{ .Date.Format "Jan 2, 2006" }}</time>
+        {{ range .Params.tags }}
+        <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
     </footer>
-    <h3 class="page-summary__headline"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-    <p class="page-summary__body">{{ .Description }}</p>
+    <h3 class="summary-headline">
+        <a class="summary-headline__link" href="{{ .Permalink }}">{{ .Title }}</a>
+    </h3>
+    <p class="summary-body">{{ .Description }}</p>
 </article>

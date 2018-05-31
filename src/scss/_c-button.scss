@@ -1,0 +1,54 @@
+.button {
+    font-family: "HeroNew", sans-serif;
+    font-size: 0.9em;
+    margin: 0.2em 0;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: lowercase;
+    cursor: pointer;
+}
+
+.button--tertiary {
+    padding: 2px 0;
+    border-bottom: 2px solid $color-black;
+}
+
+.button--secondary {
+    padding: 4px 16px;
+    border: 2px solid $color-black;
+}
+
+.button--primary {
+    padding: 8px 24px;
+    border: none;
+    background-color: $color-black;
+    color: white;
+}
+
+.button--primary--on-teal {
+    color: $color-teal;
+}
+
+.button--primary--on-gray {
+    color: $color-gray-light;
+}
+
+@media (hover:hover) {
+    .button--primary {
+        &:hover {
+            background-color: black;
+        }
+    }
+    .button--secondary {
+        &:hover {
+            color: black;
+            border-color: black;
+        }
+    }
+    .button--tertiary {
+        &:hover {
+            color: black;
+            border-color: black;
+        }
+    }
+}

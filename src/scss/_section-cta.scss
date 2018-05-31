@@ -1,27 +1,44 @@
-.call-to-action-section {
-    @include content-section;
+.cta-section {
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.call-to-action {
+.cta {
     background-color: $color-teal;
     text-align: center;
-    padding: 40px;
+    padding: 2.4em;
 }
 
-.call-to-action__head {
+.cta__head {
     margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.cta__body {
+    margin-top: 0.8em;
+}
+.cta__button {
+    display: inline-block;
+    margin-top: 0.8em;
+}
+@media screen and (min-width: $break-point-m) {
+    .cta {
+        grid-area: cta;
+    }
+    .cta-section {
+        padding-left: 16px;
+        padding-right: 16px;
+        display: grid;
+        @include grid-column-gap;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". cta cta cta cta .";
+    }
 }
 
-@media screen and (min-width: $break-point-m) {
-    .call-to-action-section {
-        display: grid;
-        grid-gap: $grid-gap;
-        gap: $grid-gap;
+@media screen and (min-width: $break-point-l) {
+    .cta-section {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
             ". . . cta cta cta cta cta cta . . .";
-    }
-    .call-to-action {
-        grid-area: cta;
     }
 }

@@ -1,84 +1,20 @@
 @import "constants";
+@import "typography";
 @import "h-visibility";
 @import "h-sections";
 @import "h-grid";
-@import "section-intro";
-@import "section-approach";
-@import "section-summary";
-@import "section-cta";
 @import "c-summary-case";
 @import "c-summary-post";
 @import "c-navigation";
 @import "c-footer";
+@import "c-button";
+@import "section-intro";
+@import "section-approach";
+@import "section-summary";
+@import "section-cta";
+
 
 body {
     margin: 0;
     padding: 0;
-}
-
-@font-face {
-    font-family: 'HeroNew'; /*a name to be used later*/
-    src: url('/font/HeroNew-Bold.woff'); /*URL to font*/
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: 'AttenNew';
-    src: url('/font/AttenNew-Regular.woff');
-    font-weight: 500;
-}
-
-body {
-    font-family: "AttenNew";
-    font-weight: 400;
-    font-size: 18px;
-    color: $color-black;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.5em;
-}
-
-@media screen and (min-width: $break-point-m) {
-    body {
-        font-size: 20px;
-    }
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "HeroNew";
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 3em;
-    line-height: 1.2em;
-}
-
-h2 {
-    font-size: 2.4em;
-    line-height: 1.2em;
-}
-
-h3 {
-    font-size: 1.2em;
-    line-height: 1.2em;
-}
-
-h4 {
-    font-size: 1.2em;
-    line-height: 1.2em;
-}
-
-h5 {
-    font-size: 1em;
-}
-
-h6 {
-    font-family: "AttenNew";
-    font-style: italic;
-    font-weight: 500;
-}
-
-a {
-    color: $color-black;
 }

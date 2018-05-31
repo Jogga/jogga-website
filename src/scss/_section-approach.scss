@@ -1,5 +1,5 @@
 .approach {
-    @include content-section;
+    margin: 4em auto;
 }
 .approach__step {
     h3 {
@@ -60,7 +60,8 @@
             ". . . . intro intro intro intro intro intro intro intro"
             ". observe observe observe . . . . . . . ."
             ". observe observe observe . . . make make make . ."
+            ". observe observe observe reflect reflect reflect make make make . ."
             ". . . . reflect reflect reflect make make make . ."
-            ". . . . reflect reflect reflect . . . . .";;
+            ". . . . reflect reflect reflect . . . . .";
     }
 }

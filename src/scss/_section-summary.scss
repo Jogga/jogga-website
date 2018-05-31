@@ -1,6 +1,14 @@
-.summary {
-    @include content-section;
+.summary__list {
+    padding: 0;
+    margin-top: 2.8em;
 }
+.summary-more {
+    margin-top: 2em;
+}
+.summary__list-element {
+    list-style-type: none;
+}
+
 @media screen and (min-width: $break-point-m){
     .summary {
         display: grid;
@@ -18,18 +26,13 @@
     }
 
     .summary__more {
+        margin-top: 1.8em;
         grid-area: more;
         justify-self: center;
     }
 
     .summary__list {
+        margin-top: 3.2em;
         grid-area: list;
     }
-}
-
-.summary__list {
-    padding: 0;
-}
-.summary__list-element {
-    list-style-type: none;
 }

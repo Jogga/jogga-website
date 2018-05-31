@@ -2,13 +2,13 @@
 {{ $count := int (.Get "count") }}
 {{ $pages := where .Site.RegularPages "Section" $section }}
 {{- if le 0 (len $pages) -}}
-<section class="summary">
+<section class="summary content-area">
     <div class="summary__intro">
         {{ .Inner }}
     </div>
     <ul class="summary__list">
         {{ range $index, $element := (first $count $pages.ByDate.Reverse) }}
-            <li class="summary__list-element">
+            <li class="summary__list-element summary__list-element--{{ $section }}">
                 {{ .Scratch.Set "seciton-index" $index }}
                 {{ .Render "summary" "test" }}
             </li>

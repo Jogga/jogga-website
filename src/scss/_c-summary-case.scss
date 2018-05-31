@@ -2,6 +2,9 @@
     min-height: 50px;
     background-color: $color-gray-light;
 }
+.summary__list-element--work {
+    margin-top: 2em;
+}
 
 @media screen and (min-width: $break-point-m) {
     .case-summary {

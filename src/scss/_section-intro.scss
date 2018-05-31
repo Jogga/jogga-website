@@ -2,9 +2,21 @@
     background-color: $color-gray-light;
 }
 .intro__text {
-    @include content-section;
     background-color: white;
+    padding: 2em 1em;
 }
+.intro__image {
+    width: 100%;
+    display: block;
+}
+.intro__description {
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+.intro__button {
+    margin-top: 1.6em;
+}
+
 @media screen and (min-width: $break-point-m) {
     .intro__content {
         display: grid;
@@ -21,9 +33,12 @@
     .image__container {
         grid-area: intro-image;
         justify-self: stretch;
-        align-self: stretch;
+        align-self: end;
     }
     .intro__content {
-        @include content-section;
+        margin-top: 2.4em;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        padding-top: 0;
     }
 }
