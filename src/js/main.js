@@ -3,7 +3,7 @@ import hideShow from './hideShow';
 
 // Add smooth scrolling if available
 if ("scrollTo" in window) {
-    var scrollButtons = document.getElementsByClassName('scroll-top');
+    var scrollButtons = document.getElementsByClassName('js-scroll-top');
     for(var i = 0; i < scrollButtons.length; i++) {
         var button = scrollButtons[i];
         button.removeAttribute('href');

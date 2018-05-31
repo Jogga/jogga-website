@@ -1,16 +1,35 @@
 .footer {
     @include content-section;
+    color: $color-gray-medium;
+}
+
+.footer__list {
+    padding: 0;
+    list-style-type: none;
+}
+.footer__heading {
+    font-size: 1.125em;
+    margin: 0.5em 0;
+}
+.footer__link {
+    text-decoration: none;
+    color: $color-gray-medium;
+}
+.footer__list-item {
+    font-size: 0.8em;
+    margin: 0.2em 0;
 }
 
 @media screen and (min-width: $break-point-s) {
     .footer {
         display: grid;
         @include grid-column-gap;
+        @include grid-row-gap(20px);
         grid-template-columns: 1fr 1fr;
         grid-template-areas: 
             "scroll scroll" 
-            "sitemap social" 
-            "legal .";
+            "legal social" 
+            "sitemap .";
     }
     .footer__column--social {
         grid-area: social;

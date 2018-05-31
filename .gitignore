@@ -8,3 +8,6 @@ node_modules
 public
 static/css
 static/js
+
+# Not Licensed for Open Source
+static/font
