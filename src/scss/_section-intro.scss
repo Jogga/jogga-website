@@ -1,0 +1,29 @@
+.intro {
+    background-color: $color-gray-light;
+}
+.intro__text {
+    @include content-section;
+    background-color: white;
+}
+@media screen and (min-width: $break-point-m) {
+    .intro__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include grid-column-gap;
+        grid-template-areas: "intro-text intro-image";
+    }
+    .intro__text {
+        grid-area: intro-text;
+        background-color: transparent;
+        margin: initial;
+        padding: initial;
+    }
+    .image__container {
+        grid-area: intro-image;
+        justify-self: stretch;
+        align-self: stretch;
+    }
+    .intro__content {
+        @include content-section;
+    }
+}

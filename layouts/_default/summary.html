@@ -1,4 +1,8 @@
-<article>
-    <a href="{{ .Permalink }}"><h3>{{ .Title }}</h3></a>
-    <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+<article class="page-summary">
+    <footer class="page-summary__footer">
+        <p><time>{{ .Date.Format "Jan 2, 2006" }}</time></p>
+        <p>Tags</p>
+    </footer>
+    <h3 class="page-summary__headline"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <p class="page-summary__body">{{ .Description }}</p>
 </article>

@@ -1,0 +1,29 @@
+@media screen and (min-width: $break-point-m) {
+    .page-summary {
+        display: grid;
+        @include grid-column-gap;
+        @include grid-row-gap(0);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "headline body body"
+            "footer body body";
+    }
+    .page-summary__footer {
+        grid-area: footer;
+    }
+    .page-summary__headline {
+        grid-area: headline;
+    }
+    .page-summary__body {
+        grid-area: body;
+    }
+}
+@media screen and (min-width: $break-point-l) {
+    .page-summary {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "footer headline headline body body body"
+    }
+}

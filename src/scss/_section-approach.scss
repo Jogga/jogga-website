@@ -1,0 +1,66 @@
+.approach {
+    @include content-section;
+}
+.approach__step {
+    h3 {
+        grid-area: head;
+    }
+    p {
+        grid-area: paragraph;
+    }
+    .approach__image {
+        grid-area: image;
+    }
+    display: grid;
+    column-gap: $grid-gap;
+    grid-column-gap: $grid-gap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "image head head head"
+        "image paragraph paragraph paragraph";
+}
+.approach__step--reflect {
+    grid-template-areas: 
+        "head head head image"
+        "paragraph paragraph paragraph image";
+}
+
+@media screen and (min-width: $break-point-m) {
+    .approach__step {
+        display: block;
+    }
+    .approach {
+        display: grid;
+        @include grid-column-gap;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". intro intro"
+            "observe reflect make";
+    }
+    .approach__intro {
+        grid-area: intro;
+    }
+    .approach__step--observe {
+        grid-area: observe;
+    }
+    .approach__step--reflect {
+        grid-area: reflect;
+    }
+    .approach__step--make {
+        grid-area: make;
+    }
+}
+@media screen and (min-width: $break-point-l) {
+    .approach {
+        grid-template-columns: $grid-template-columns;
+        grid-row-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            ". . . . intro intro intro intro intro intro intro intro"
+            ". observe observe observe . . . . . . . ."
+            ". observe observe observe . . . make make make . ."
+            ". . . . reflect reflect reflect make make make . ."
+            ". . . . reflect reflect reflect . . . . .";;
+    }
+}

@@ -1,3 +1,6 @@
 {{ define "main" }}
+    {{ block "nav" . }}
+        {{ partial "header/nav.html" . }}
+    {{ end }}
     {{ .Content }}
 {{ end }}

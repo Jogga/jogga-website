@@ -1,6 +1,19 @@
 {{ define "main" }}
-{{- .Content -}}
-    <section>
-        {{ partial "cta/call-to-action.html" . }}
-    </section>
+<main>
+    <header class="intro">
+        {{ partial "header/nav.html" . }}
+        <div class="intro__content">
+            <div class="image__container">
+                <img class="intro__image" src="/img/jogga.png" alt="bla">
+            </div>
+            <div class="intro__text">
+                <h1>{{ .Title }}</h1>
+                <p>{{ .Description }}</p>
+                <a class="js-cipher-mailto h-hide button button--primary" href="mailto:{{ .Site.Params.contact.email }}">Work with me</a>
+                <noscript><a class="button button--primary" href="mailto:{{ .Site.Params.contact.gmail }}">Work with me</a></noscript>
+            </div>
+        </div>
+    </header>
+    {{ .Content }}
+</main>
 {{ end }}

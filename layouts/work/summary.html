@@ -1,3 +1,14 @@
-<article>
-    <a href="{{ .Permalink }}"><h3>{{ .Title }}</h3></a>
+{{ $index := .Scratch.Get "seciton-index" }}
+{{ if eq (mod $index 2) 0 }}
+<article class="case-summary case-summary--left">
+{{ else }}
+<article class="case-summary case-summary--right">
+{{ end }}
+    <div class="case-summary__graphic"> 
+    </div>
+    <div class="case-summary__description">
+        <h3>{{ .Title }}</a></h3>
+        <p>{{ .Description }}</p>
+        <a href="{{ .Permalink }}">View case</a>
+    </div>
 </article>

@@ -1,0 +1,27 @@
+.call-to-action-section {
+    @include content-section;
+}
+
+.call-to-action {
+    background-color: $color-teal;
+    text-align: center;
+    padding: 40px;
+}
+
+.call-to-action__head {
+    margin-top: 0;
+}
+
+@media screen and (min-width: $break-point-m) {
+    .call-to-action-section {
+        display: grid;
+        grid-gap: $grid-gap;
+        gap: $grid-gap;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". . . cta cta cta cta cta cta . . .";
+    }
+    .call-to-action {
+        grid-area: cta;
+    }
+}
