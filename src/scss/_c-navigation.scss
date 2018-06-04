@@ -11,12 +11,16 @@
 .navigation__list {
     justify-content: space-between;
     display: flex;
-    flex-grow: 0.2;
+    flex-grow: 0.4;
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
-
+@media all and (min-width: $break-point-m) {
+    .navigation__list {
+        flex-grow: 0.2;
+    }
+}
 .navigation__link {
     display: block;
     padding: 10px 5px;

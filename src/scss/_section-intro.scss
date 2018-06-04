@@ -1,39 +1,43 @@
 .intro {
-    background-color: $color-gray-light;
+    margin-top: 0;
 }
 .intro__text {
     background-color: white;
-    padding: 2em 1em;
 }
 .intro__image {
     width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
     display: block;
 }
 .intro__description {
-    font-size: 1.4em;
-    line-height: 1.4em;
+    font-size: 1.2em;
+    line-height: 1.6em;
 }
 .intro__button {
     margin-top: 1.6em;
 }
 
-@media screen and (min-width: $break-point-m) {
+
+@media all and (min-width: $break-point-m) {
     .intro__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         @include grid-column-gap;
-        grid-template-areas: "intro-text intro-image";
+        grid-template-areas: "intro-image intro-text";
+    }
+    .intro__headline {
+        margin-top: 0;
     }
     .intro__text {
         grid-area: intro-text;
-        background-color: transparent;
-        margin: initial;
-        padding: initial;
+        align-self: center;
     }
     .image__container {
         grid-area: intro-image;
-        justify-self: stretch;
-        align-self: end;
+    }
+    .intro__image {
+        max-width: none;
     }
     .intro__content {
         margin-top: 2.4em;

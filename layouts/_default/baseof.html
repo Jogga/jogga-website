@@ -28,3 +28,6 @@
     {{ partial "scripts.html" }}
 </body>
 </html>
+{{- if isset .Page.Params "code" -}}
+<link rel="stylesheet" href="/css/syntax.css">
+{{- end -}}

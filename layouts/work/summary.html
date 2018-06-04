@@ -4,7 +4,11 @@
 {{ else }}
 <article class="case-summary case-summary--right">
 {{ end }}
-    <div class="case-summary__graphic"> 
+    <div class="case-summary__graphic">
+        {{ if isset .Params "special" }}
+        <p class="case-summary__special">{{ .Params.special }}</p>
+        {{ end }}
+        <img src="/img/phone.png" alt="Phone" class="case-summary__image">
     </div>
     <div class="case-summary__description">
         <h3>{{ .Title }}</a></h3>

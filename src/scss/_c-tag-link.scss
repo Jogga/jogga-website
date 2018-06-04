@@ -1,0 +1,23 @@
+.tag-link {
+    display: inline;
+    text-decoration: none;
+    font-style: italic;
+    color: $color-gray-medium;
+    border: 1px solid $color-gray-medium-light;
+    text-transform: capitalize;
+    padding: 0px 8px 1px;
+    border-radius: 20px;
+    &:hover {
+        color: $color-teal;
+        border-color: $color-teal;
+    }
+}
+
+@media not all and (hover: hover) { 
+    .tag-link {
+        &:hover {
+            color: $color-gray-medium;
+            border-color: $color-gray-medium-light;
+        }
+    }
+}

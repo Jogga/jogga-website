@@ -1,12 +1,19 @@
 .summary__list {
+    margin: 0;
     padding: 0;
-    margin-top: 2.8em;
 }
-.summary-more {
-    margin-top: 2em;
+.summary__more {
+    margin-top: 2.4em;
 }
 .summary__list-element {
     list-style-type: none;
+}
+
+.summary__intro {
+    margin-bottom: 3.4em;
+    p {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (min-width: $break-point-m){
@@ -26,13 +33,11 @@
     }
 
     .summary__more {
-        margin-top: 1.8em;
         grid-area: more;
         justify-self: center;
     }
 
     .summary__list {
-        margin-top: 3.2em;
         grid-area: list;
     }
 }

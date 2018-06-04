@@ -57,11 +57,11 @@
         grid-row-gap: 20px;
         grid-template-rows: auto;
         grid-template-areas:
-            ". . . . intro intro intro intro intro intro intro intro"
-            ". observe observe observe . . . . . . . ."
-            ". observe observe observe . . . make make make . ."
-            ". observe observe observe reflect reflect reflect make make make . ."
-            ". . . . reflect reflect reflect make make make . ."
-            ". . . . reflect reflect reflect . . . . .";
+            "intro intro intro intro intro intro intro intro . . . ."
+            ". . . . . . . . . make make make"
+            ". . . observe observe observe . . . make make make"
+            ". . . observe observe observe reflect reflect reflect make make make"
+            ". . . observe observe observe reflect reflect reflect . . ."
+            ". . . . . . reflect reflect reflect . . ."
     }
 }

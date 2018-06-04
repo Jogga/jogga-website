@@ -47,3 +47,29 @@ for(var i = 0; i < phoneElements.length; i++) {
     element.innerHTML = cipher.cipherPhone(element.innerHTML);
     hideShow.show(element, 1);
 }
+
+var font = new FontFace("Alegreya", "url(/font/Alegreya-Italic.woff)", {
+    style: 'italic', weight: '400', display: 'swap'
+});
+
+font.load().then(function() {
+    document.fonts.add(font);
+});
+
+var mono = new FontFace("IBM Plex Mono", "url(/font/IBMPlexMono-Regular.woff)", {
+    style: 'normal', weight: '400', display: 'swap'
+});
+
+mono.load().then(function() {
+    console.log("ready");
+    document.fonts.add(mono);
+});
+
+
+// @font-face {
+//     font-family: 'IBM Plex Mono';
+//     src: url('/font/IBMPlexMono-Regular.woff');
+//     font-weight: 400;
+//     font-style: normal;
+//     font-display: swap;
+// }
