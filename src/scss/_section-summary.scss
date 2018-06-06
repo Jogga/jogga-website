@@ -2,18 +2,23 @@
     margin: 0;
     padding: 0;
 }
-.summary__more {
-    margin-top: 2.4em;
-}
 .summary__list-element {
     list-style-type: none;
 }
-
+.summary__more {
+    margin-top: 2.4em;
+}
+.summary-headline {
+    margin-bottom: 0.4em;
+}
 .summary__intro {
     margin-bottom: 3.4em;
-    p {
-        margin-bottom: 0;
-    }
+}
+.summary__intro-body {
+    margin-bottom: 0;
+}
+.summary__intro-headline {
+    margin-top: 0;
 }
 
 @media screen and (min-width: $break-point-m){
@@ -27,16 +32,13 @@
             "list list list"
             ". more ."
     }
-
     .summary__intro {
         grid-area: intro;
     }
-
     .summary__more {
         grid-area: more;
         justify-self: center;
     }
-
     .summary__list {
         grid-area: list;
     }
