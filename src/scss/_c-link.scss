@@ -1,0 +1,16 @@
+a {
+    color: $color-black;
+    cursor: pointer;
+    &:hover {
+        color: $color-accent-dark;
+    }
+}
+
+@media not all and (hover: hover) {
+    a {
+        color: $color-black;
+        &:hover {
+            color: $color-black;
+        }
+    }
+}

@@ -20,8 +20,8 @@
     border-top: none;
     transition-property: color, border-color;
     &:hover {
-        color: $color-accent;
-        border-color: $color-accent;
+        color: $color-accent-dark;
+        border-color: $color-accent-dark;
     }
 }
 
@@ -31,8 +31,8 @@
     border-radius: 40px;
     transition-property: color, border-color;
     &:hover {
-        color: $color-accent;
-        border-color: $color-accent;
+        color: $color-accent-dark;
+        border-color: $color-accent-dark;
     }
 }
 
@@ -42,17 +42,17 @@
     border: none;
     background-color: $color-black;
     color: white;
-    transition-property: background-color;
+    transition-property: background-color color;
     &:hover {
         color: white;
-        background-color: $color-accent;
+        background-color: $color-accent-dark;
     }
 }
 
-.button--primary--on-teal {
+.button--primary--on-accent {
     color: $color-accent;
     &:hover {
-        color: $color-accent;
+        color: $color-black;
         background-color: white;
     }
 }

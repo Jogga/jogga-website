@@ -7,7 +7,7 @@
             <h3 class="cta__head">Open for projects</h3>
             <p class="cta__body">I’m available from the <em>{{ .Site.Params.availability }}</em>. Let’s talk about how I can contribute to your team and product!</p>
         {{ end }}
-        <a class="js-cipher-mailto cta__button button button--primary button--primary--on-teal h-hide" href="mailto:{{ .Site.Params.contact.email }}">{{ .Get "buttonLabel" }}</a>
-        <noscript><a href="mailto:{{ .Site.Params.contact.gmail }}" class="cta__button button button--primary button--primary--on-teal">{{ .Get "buttonLabel" }}</a></noscript>
+        <a class="js-cipher-mailto cta__button button button--primary button--primary--on-accent h-hide" href="mailto:{{ .Site.Params.contact.email }}">{{ .Get "buttonLabel" }}</a>
+        <noscript><a href="mailto:{{ .Site.Params.contact.gmail }}" class="cta__button button button--primary button--primary--on-accent">{{ .Get "buttonLabel" }}</a></noscript>
     </div>
 </section>

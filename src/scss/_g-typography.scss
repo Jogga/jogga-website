@@ -89,12 +89,6 @@ h6 {
     }
 }
 
-a {
-    color: $color-black;
-    &:hover {
-        color: $color-accent;
-    }
-}
 em {
     font-family: $font-serif;
     font-style: italic;
