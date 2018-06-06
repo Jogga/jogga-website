@@ -14,11 +14,11 @@
     font-display: swap;
 }
 
-$serif: "Alegreya", Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
-$sans: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-serif: "Alegreya", Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+$font-sans: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 body {
-    font-family: "Alegreya";
+    font-family: $font-serif;
     font-weight: 400;
     font-size: 20px;
     color: $color-black;
@@ -35,7 +35,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Work Sans";
+    font-family: $font-sans;
     font-weight: 700;
     line-height: 1.2em;
     margin-bottom: 0.6em;
@@ -57,7 +57,7 @@ h5 {
     font-size: 0.8em;
 }
 h6 {
-    font-family: "Alegreya";
+    font-family: $font-serif;
     font-style: italic;
     font-weight: 400;
 }
@@ -92,10 +92,10 @@ h6 {
 a {
     color: $color-black;
     &:hover {
-        color: $color-teal;
+        color: $color-accent;
     }
 }
 em {
-    font-family: $serif;
+    font-family: $font-serif;
     font-style: italic;
 }

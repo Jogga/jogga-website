@@ -25,9 +25,10 @@
 <body id="top">
     {{ block "main" . }}{{ end }}
     {{ partial "footer/footer.html" . }}
-    {{ partial "scripts.html" }}
 </body>
 </html>
-{{- if isset .Page.Params "code" -}}
+<script type="text/javascript" src="/js/main.js" async></script>
+{{ if isset .Page.Params "code" }}
 <link rel="stylesheet" href="/css/syntax.css">
-{{- end -}}
+<script type="text/javascript" src="/js/syntax.js" async></script>
+{{ end }}
