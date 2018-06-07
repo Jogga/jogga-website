@@ -3,6 +3,10 @@
 }
 .intro__text {
     background-color: white;
+    text-align: center;
+}
+.intro__headline--break {
+    display: none;
 }
 .intro__image {
     width: 100%;
@@ -10,8 +14,14 @@
     margin: 0 auto;
     display: block;
 }
+.image__container {
+    padding-top: 10px;
+    padding-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+}
 .intro__description {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.4em;
 }
 .intro__button {
@@ -20,6 +30,9 @@
 
 
 @media all and (min-width: $break-point-m) {
+    .intro__headline--break {
+        display: initial;
+    }
     .intro__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -31,9 +44,14 @@
     }
     .intro__text {
         grid-area: intro-text;
+        text-align: left;
         align-self: center;
     }
     .image__container {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 40px;
+        padding-right: 40px;
         grid-area: intro-image;
     }
     .intro__image {
