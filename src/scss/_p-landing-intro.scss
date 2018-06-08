@@ -40,6 +40,7 @@
         grid-template-areas: "intro-image intro-text";
     }
     .intro__headline {
+        font-size: 2.4em;
         margin-top: 0;
     }
     .intro__text {
@@ -62,5 +63,11 @@
         margin-bottom: 0;
         padding-bottom: 0;
         padding-top: 0;
+    }
+}
+
+@media all and (min-width: $break-point-l) {
+    .intro__headline {
+        font-size: 2.8em;
     }
 }
