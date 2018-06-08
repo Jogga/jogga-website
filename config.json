@@ -11,6 +11,7 @@
     "baseurl": "https://jogga.co/",
     "languageCode": "en-us",
     "canonifyurls": false,
+    "sectionPagesMenu": "main",
     "permalinks": {
         "blog": "blog/:year/:title/",
         "work": "work/:title/",

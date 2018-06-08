@@ -1,0 +1,84 @@
+.button {
+    font-family: $font-sans;
+    font-weight: 700;
+    font-size: 0.9em;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    &:hover {
+        transition-duration: 0.05s;
+        transition-timing-function: ease-out;
+    }
+}
+
+.button--tertiary {
+    padding-top: 2px;
+    border-bottom: 2px solid $color-black;
+    border-top: none;
+    transition-property: color, border-color;
+    &:hover {
+        color: $color-accent-dark;
+        border-color: $color-accent-dark;
+    }
+}
+
+.button--secondary {
+    padding: 4px 16px;
+    border: 2px solid $color-black;
+    border-radius: 40px;
+    transition-property: color, border-color;
+    &:hover {
+        color: $color-accent-dark;
+        border-color: $color-accent-dark;
+    }
+}
+
+.button--primary {
+    padding: 8px 24px;
+    border-radius: 40px;
+    border: none;
+    background-color: $color-black;
+    color: white;
+    transition-property: background-color color;
+    &:hover {
+        color: white;
+        background-color: $color-accent-dark;
+    }
+}
+
+.button--primary--on-accent {
+    color: $color-accent;
+    &:hover {
+        color: $color-black;
+        background-color: white;
+    }
+}
+
+@media not all and (hover: hover) {
+    .button--primary {
+        &:hover {
+            background-color: $color-black;
+        }
+    }
+    .button--secondary {
+        &:hover {
+            color: $color-black;
+            border-color: $color-black;
+        }
+    }
+    .button--tertiary {
+        &:hover {
+            color: $color-black;
+            border-color: $color-black;
+        }
+    }
+    .button--primary--on-accent {
+        &:hover {
+            background-color: $color-black;
+            color: $color-accent;
+        }
+    }
+}

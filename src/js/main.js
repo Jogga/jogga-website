@@ -1,9 +1,10 @@
-import cipher from './cipher';
-import hideShow from './hideShow';
+import cipher from './helper/cipher';
+import hideShow from './helper/hideShow';
+import font from './helper/font';
 
 // Add smooth scrolling if available
 if ("scrollTo" in window) {
-    var scrollButtons = document.getElementsByClassName('scroll-top');
+    var scrollButtons = document.getElementsByClassName('js-scroll-top');
     for(var i = 0; i < scrollButtons.length; i++) {
         var button = scrollButtons[i];
         button.removeAttribute('href');
@@ -47,3 +48,6 @@ for(var i = 0; i < phoneElements.length; i++) {
     element.innerHTML = cipher.cipherPhone(element.innerHTML);
     hideShow.show(element, 1);
 }
+
+// Load additional fonts
+font.load('/font/Alegreya-Italic.woff', 'Alegreya', '400', 'italic');

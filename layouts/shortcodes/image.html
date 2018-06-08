@@ -1,0 +1,16 @@
+{{ $name := .Get "name" }}
+{{ $retinaName := .Get "retinaName" }}
+{{ $alt := .Get "alt" }}
+{{ $class := .Get "class"}}
+
+
+{{ if and $name $retinaName }}
+    {{ $image := $.Page.Resources.GetMatch $name }}
+    {{ $retinaImage := $.Page.Resources.GetMatch $retinaName }}
+    <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" srcset="{{ $image.RelPermalink }} 1x, {{ $retinaImage.RelPermalink }} 2x" class="{{ $class }}">
+{{ else if $name }}
+    {{ $image := $.Page.Resources.GetMatch $name }}
+    <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}" class="{{ $class }}">
+{{ end }}
+
+

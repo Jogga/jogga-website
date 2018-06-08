@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {{ partial "link-font.html" . }}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ .Title }}</title>
@@ -10,12 +11,12 @@
     <meta name="autor" content="{{ .Site.Params.contact.name.first}} {{ .Site.Params.contact.name.last}}">
     <meta name="keywords" content="{{delimit .Site.Params.keywords ", " }}">
     {{ block "meta-social" . }}
-    {{ partial "head/meta-twitter.html" . }}
-    {{ partial "head/meta-facebook.html" . }}
+    {{ partial "meta-twitter.html" . }}
+    {{ partial "meta-facebook.html" . }}
     {{- end -}}
     
     {{ block "meta-favicon" . }}
-    {{ partial "head/meta-favicon" . }}
+    {{ partial "meta-favicon.html" . }}
     {{- end -}}
     
     {{ block "head" . }}
@@ -23,7 +24,11 @@
 </head>
 <body id="top">
     {{ block "main" . }}{{ end }}
-    {{ partial "footer/footer.html" . }}
-    {{ partial "scripts.html" }}
+    {{ partial "footer.html" . }}
 </body>
 </html>
+<script type="text/javascript" src="/js/main.js" async></script>
+{{ if isset .Page.Params "code" }}
+<link rel="stylesheet" href="/css/syntax.css">
+<script type="text/javascript" src="/js/syntax.js" async></script>
+{{ end }}

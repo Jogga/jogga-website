@@ -1,5 +1,33 @@
+.summary__list-element--blog {
+    border-bottom: 2px solid $color-gray-light;
+    &:first-child {
+        border-top: 2px solid $color-gray-light;
+    }
+}
+.post-summary {
+    padding: 28px 0;
+}
+.post-summary__headline {
+    margin-bottom: 0.4em;
+}
+.summary-headline__link {
+    text-decoration: none;
+}
+.summary-footer {
+    font-size: 0.8em;
+    color: $color-gray-medium;
+}
+.summary-body {
+    margin: 0;
+}
+.post-date {
+    margin-right: 0.5em;
+}
 @media screen and (min-width: $break-point-m) {
-    .page-summary {
+    .post-date {
+        display: block;
+    }
+    .post-summary {
         display: grid;
         @include grid-column-gap;
         @include grid-row-gap(0);
@@ -9,18 +37,22 @@
             "headline body body"
             "footer body body";
     }
-    .page-summary__footer {
+    .summary-footer {
+        margin: 0;
         grid-area: footer;
+        align-self: start;
     }
-    .page-summary__headline {
+    .summary-headline {
+        margin: 0;
         grid-area: headline;
     }
-    .page-summary__body {
+    .summary-body {
+        margin: 0;
         grid-area: body;
     }
 }
 @media screen and (min-width: $break-point-l) {
-    .page-summary {
+    .post-summary {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:

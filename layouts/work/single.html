@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ partial "nav.html" . }}
 {{ $startDate := dateFormat "2006" (.Page.Param "project-start") }}
 {{ $endDate := dateFormat "2006" (.Page.Param "project-end") }}
 <time>

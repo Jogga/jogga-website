@@ -1,0 +1,47 @@
+<footer class="footer content-area">
+	<div class="footer__column footer__column--scroll ">
+		<a href="#top" class="js-scroll-top button button--tertiary">scroll up</a>
+	</div>
+	<div class="footer__column footer__column--legal">
+		<h4 class="footer__heading">Legal</h4>
+		<ul class="footer__list">
+			<li class="footer__list-item">© 2018 Joachim Fröstl</li>
+			<noscript>
+				<li class="footer__list-item"><a class="footer__link" href="mailto:{{- .Site.Params.contact.gmail -}}">{{- .Site.Params.contact.gmail -}}</a></li>
+			</noscript>
+			<li class="h-hide footer__list-item"><a class="js-cipher-mail js-cipher-mailto footer__link" href="mailto:{{- .Site.Params.contact.email -}}">{{- .Site.Params.contact.email -}}</a></li>
+			<li class="h-hide footer__list-item"><a class="js-cipher-phone js-cipher-tel footer__link" href="tel:{{- .Site.Params.contact.phone -}}">{{- .Site.Params.contact.phone -}}</a></li>
+			{{ range .Site.Menus.legal }}
+			<li class="footer__list-item">
+				<a class="footer__link" href="{{ .URL }}" title="{{ .Title }}">
+					{{- .Name -}}
+				</a>
+			</li>
+			{{ end }}
+		</ul>
+	</div>
+	<nav class="footer__column footer__column--social">
+		<h4 class="footer__heading">Social</h4>
+		<ul class="footer__list">
+			{{ range sort .Site.Params.social "weight" }}
+			<li class="footer__list-item">
+				<a class="footer__link" href="{{ .url }}" title="{{ .name }}">
+					{{- .name -}}
+				</a>
+			</li>
+			{{ end }}
+		</ul>
+	</nav>
+	<nav class="footer__column footer__column--sitemap">
+		<h4 class="footer__heading">Jump to</h4>
+		<ul class="footer__list">
+			{{ range .Site.Menus.footer }}
+			<li class="footer__list-item">
+				<a class="footer__link" href="{{ .URL }}" title="{{ .Title }}">
+					{{- .Name -}}
+				</a>
+			</li>
+			{{ end }}
+		</ul>
+	</nav>
+</footer>

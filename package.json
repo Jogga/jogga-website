@@ -9,8 +9,8 @@
     "scss:watch": "npm run scss:build-dev && npm run scss:build-dev -- -w",
     "scss:clean": "rm -rf ./static/css/",
     
-    "js:build": "webpack --mode production --entry ./src/js/main.js --output-path ./static/js/ --output-filename main.js",
-    "js:build-dev": "webpack --mode development --entry ./src/js/main.js --output-path ./static/js/ --output-filename main.js",
+    "js:build": "webpack --mode production --config webpack.config.js",
+    "js:build-dev": "webpack --mode development --config webpack.config.js",
     "js:watch": "npm run js:build-dev -- --watch",
     "js:clean": "rm -rf ./static/js",
 

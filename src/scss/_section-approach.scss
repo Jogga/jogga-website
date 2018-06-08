@@ -1,44 +1,92 @@
-.approach {
-    @include content-section;
+.approach__intro {
+    margin-bottom: 3.4em;
+}
+.approach__intro-headline {
+    margin-top: 0;
+}
+.approach__intro-paragraph {
+    margin-bottom: 0;
+}
+.approach__step-headline {
+    margin-top: 0;
+    margin-bottom: 0.4em;
+}
+.approach__step-paragraph {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.approach__step-text {
+    grid-area: txt;
+}
+.approach__step-image-container {
+    grid-area: img;
+    background-image: url(/background-s.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: stretch;
+    justify-self: stretch;
+    background-position-x: center;
+    background-position-y: top;
+}
+.approach__step-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.approach__steps {
+    margin: 0;
+    padding: 0;
 }
 .approach__step {
-    h3 {
-        grid-area: head;
-    }
-    p {
-        grid-area: paragraph;
-    }
-    .approach__image {
-        grid-area: image;
-    }
     display: grid;
     column-gap: $grid-gap;
     grid-column-gap: $grid-gap;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-        "image head head head"
-        "image paragraph paragraph paragraph";
+        "img txt txt txt";
+    margin-bottom: 2.4em;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 .approach__step--reflect {
     grid-template-areas: 
-        "head head head image"
-        "paragraph paragraph paragraph image";
+        "txt txt txt img";
 }
 
 @media screen and (min-width: $break-point-m) {
+    .approach {
+        display: grid;
+        @include grid-column-gap;
+        @include grid-row-gap(3em);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "intro intro ." 
+            "steps steps steps";
+    }
+    .approach__intro {
+        grid-area: intro;
+        margin-bottom: 0;
+    }
     .approach__step {
         display: block;
+        margin-bottom: 0;
     }
-    .approach {
+    .approach__steps {
+        grid-area: steps;
         display: grid;
         @include grid-column-gap;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
-            ". intro intro"
             "observe reflect make";
     }
-    .approach__intro {
-        grid-area: intro;
+    .approach__step-image-container { 
+        align-self: start;
+        justify-self: start;
+        background-position-x: 0;
+    }
+    .approach__step-image { 
+        display: inline;
     }
     .approach__step--observe {
         grid-area: observe;
@@ -52,15 +100,31 @@
 }
 @media screen and (min-width: $break-point-l) {
     .approach {
-        grid-template-columns: $grid-template-columns;
-        grid-row-gap: 20px;
-        grid-row-gap: 20px;
+        @include grid-row-gap(1em);
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "intro intro intro intro intro intro intro intro . . . ."
+            ". . . steps steps steps steps steps steps steps steps steps";
+    }
+    .approach__intro {
+        grid-area: intro;
+    }
+    .approach__step-image-container { 
+        background-image: none;
+    }
+    .approach__steps {
+        background-image: url(/background-l.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        grid-area: steps;
+        grid-template-columns: 1fr 1fr 1fr;
+        @include grid-column-gap;
         grid-template-rows: auto;
         grid-template-areas:
-            ". . . . intro intro intro intro intro intro intro intro"
-            ". observe observe observe . . . . . . . ."
-            ". observe observe observe . . . make make make . ."
-            ". . . . reflect reflect reflect make make make . ."
-            ". . . . reflect reflect reflect . . . . .";;
+            ". . make"
+            "observe . make"
+            "observe reflect make"
+            "observe reflect ."
+            ". reflect ."
     }
 }
