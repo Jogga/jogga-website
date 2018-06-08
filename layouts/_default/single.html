@@ -1,6 +1,17 @@
 {{ define "main" }}
-    {{ block "nav" . }}
-        {{ partial "nav.html" . }}
-    {{ end }}
-    {{ .Content }}
+    {{ partial "nav.html" . }}
+    <main class="content-area">
+        <header>
+            <h1>{{ .Page.Title }}</h1>
+        </header>
+        <aside>
+            <time>{{ .Page.Date }}</time>
+            <ul>
+                <li></li>
+            </ul>
+        </aside>
+        <div class="text-content">
+            {{ .Content }}
+        </div>
+    </main>
 {{ end }}
