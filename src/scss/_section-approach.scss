@@ -18,10 +18,20 @@
 .approach__step-text {
     grid-area: txt;
 }
-.approach__step-image {
+.approach__step-image-container {
     grid-area: img;
-    align-self: center;
-    justify-self: center;
+    background-image: url(/background-s.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: stretch;
+    justify-self: stretch;
+    background-position-x: center;
+    background-position-y: top;
+}
+.approach__step-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .approach__steps {
     margin: 0;
@@ -70,6 +80,14 @@
         grid-template-areas: 
             "observe reflect make";
     }
+    .approach__step-image-container { 
+        align-self: start;
+        justify-self: start;
+        background-position-x: 0;
+    }
+    .approach__step-image { 
+        display: inline;
+    }
     .approach__step--observe {
         grid-area: observe;
     }
@@ -82,8 +100,7 @@
 }
 @media screen and (min-width: $break-point-l) {
     .approach {
-        display: grid;
-        @include grid-column-gap;
+        @include grid-row-gap(1em);
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
             "intro intro intro intro intro intro intro intro . . . ."
@@ -92,7 +109,13 @@
     .approach__intro {
         grid-area: intro;
     }
+    .approach__step-image-container { 
+        background-image: none;
+    }
     .approach__steps {
+        background-image: url(/background-l.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
         grid-area: steps;
         grid-template-columns: 1fr 1fr 1fr;
         @include grid-column-gap;

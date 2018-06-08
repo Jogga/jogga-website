@@ -75,4 +75,10 @@
             border-color: $color-black;
         }
     }
+    .button--primary--on-accent {
+        &:hover {
+            background-color: $color-black;
+            color: $color-accent;
+        }
+    }
 }

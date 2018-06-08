@@ -10,7 +10,7 @@
     "title": "Jogga",
     "baseurl": "https://jogga.co/",
     "languageCode": "en-us",
-    "canonifyurls": true,
+    "canonifyurls": false,
     "sectionPagesMenu": "main",
     "permalinks": {
         "blog": "blog/:year/:title/",
