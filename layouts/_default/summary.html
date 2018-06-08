@@ -2,8 +2,8 @@
     <footer class="summary-footer">
         <time class="post-date">{{ .Date.Format "Jan 2, 2006" }}</time>
         {{ range .Params.tags }}
-        <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-    {{ end }}
+        <a class="tag-link tag-link--quiet" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
     </footer>
     <h3 class="summary-headline">
         <a class="summary-headline__link" href="{{ .Permalink }}">{{ .Title }}</a>

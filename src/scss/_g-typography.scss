@@ -38,23 +38,24 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $font-sans;
     font-weight: 700;
     line-height: 1.2em;
-    margin-bottom: 0.6em;
+    margin-top: 2em;
+    margin-bottom: 0.75em;
 }
 h1 {
-    font-size: 1.8em;
-    line-height: 1.2em;
+    font-size: 2.0em;
+    margin-top: 0;
 }
 h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
 }
 h3 {
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 h4 {
     font-size: 1em;
 }
 h5 {
-    font-size: 0.8em;
+    font-size: 1em;
 }
 h6 {
     font-family: $font-serif;
@@ -64,10 +65,10 @@ h6 {
 
 @media all and (min-width: $break-point-m) {
     h1 {
-        font-size: 2.4em;
+        font-size: 2.8em;
     }
     h2 {
-        font-size: 1.8em;
+        font-size: 2.2em;
     }
     h3 {
         font-size: 1.4em;
@@ -82,10 +83,13 @@ h6 {
 
 @media all and (min-width: $break-point-l) {
     h1 {
-        font-size: 2.6em;
+        font-size: 3.2em;
     }
     h2 {
-        font-size: 2.2em;
+        font-size: 2.4em;
+    }
+    h3 {
+        font-size: 1.6em;
     }
 }
 
