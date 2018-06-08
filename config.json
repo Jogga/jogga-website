@@ -12,7 +12,6 @@
     "languageCode": "en-us",
     "pluralizeListTitles": false,
     "canonifyurls": false,
-    "sectionPagesMenu": "main",
     "permalinks": {
         "blog": "blog/:year/:title/",
         "work": "work/:title/",
