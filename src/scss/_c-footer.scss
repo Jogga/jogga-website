@@ -46,6 +46,7 @@
     .footer {
         background-color: transparent;
         display: grid;
+        @include grid-column-gap;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
             "scroll legal social sitemap";

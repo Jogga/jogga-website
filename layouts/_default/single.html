@@ -1,17 +1,28 @@
 {{ define "main" }}
     {{ partial "nav.html" . }}
-    <article class="content-area" role="main">
+    <article class="post content-area" role="main">
         <aside class="post-info">
-            <time>{{ .Page.Date }}</time>
-            <ul>
-                <li></li>
-            </ul>
+            <time class="post-time">{{ .Date.Format "Jan 2, 2006" }}</time>
         </aside>
         <header class="post-header">
             <h1>{{ .Page.Title }}</h1>
         </header>
         <div class="post-body">
             {{ .Content }}
+            <footer class="post-footer">
+                <p>
+                    Written by {{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.contact.name.first }} {{ .Site.Params.contact.name.last }}{{ end }} 
+                    on {{ .Date.Format "Jan 2, 2006" }}.
+                    {{ if .Params.update }}Last updated on {{ dateFormat "Jan 2, 2006" .Params.update }}.{{end}}
+                </p>
+                {{ if .Params.tags }}
+                <ul class="tag-list">
+                {{ range .Params.tags }}
+                    <li  class="tag-list__element"><a class="tag-link tag-link--quiet" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+                {{ end }}
+                </ul>
+                {{ end }}
+            </footer>
         </div>
     </article>
 {{ end }}

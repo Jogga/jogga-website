@@ -1,0 +1,11 @@
+.post-time {
+    background-color: $color-accent;
+    padding-left: 2px;
+    padding-right: 2px;
+    display: inline-block;
+}
+@media all and (min-width: $break-point-m) {
+    .post-time {
+        margin-top: 0.5em;
+    }
+}
