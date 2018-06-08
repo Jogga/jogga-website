@@ -42,6 +42,13 @@
 				</a>
 			</li>
 			{{ end }}
+			{{ range .Site.Menus.main }}
+			<li class="footer__list-item">
+				<a class="footer__link" href="{{ .URL }}" title="{{ .Title }}">
+					{{- .Name -}}
+				</a>
+			</li>
+			{{ end }}
 		</ul>
 	</nav>
 </footer>
