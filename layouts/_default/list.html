@@ -1,12 +1,14 @@
 {{ define "main" }}
-    {{ block "nav" . }}
-        {{ partial "nav.html" . }}
-    {{ end }}
-    <h1>Hello list template</h1>
-    {{ .Content }}
-    <ul>
-    {{ range .Pages }}
-        <li><a href="{{ .URL }}">{{ .Title }}</a></li>
-    {{ end }}
-    </ul>
+    {{ partial "nav.html" . }}
+    <main class="content-area">
+        {{ .Content }}
+        <ul class="summary__list">
+        {{ range $index, $element := .Pages.ByDate.Reverse }}
+            <li class="summary__list-element">
+                {{ .Scratch.Set "seciton-index" $index }}
+                {{ .Render "summary" "test" }}
+            </li>
+        {{ end }}
+        </ul>
+    </main>
 {{ end }}
