@@ -10,9 +10,11 @@
         {{ if isset .Params "special" }}
         <p class="case-summary__special">{{ .Params.special }}</p>
         {{ end }}
-        <a class="case-summary__image-link case-summary__device-{{ .Param "preview-device" }}" href="{{ .Permalink }}">
-            {{ partial "preview-device.html" . }}
-            <img class="case-summary__image" src="{{ $preview.RelPermalink }}" srcset="{{ $preview.RelPermalink }} 1x, {{ $preview2x.RelPermalink }} 2x" alt="{{ $preview.Title }}">
+        <a class="case-summary__image-link device-preview" href="{{ .Permalink }}">
+            <img class="case-summary__image device-preview__image device-preview__image--{{ .Param "preview-device" }}" 
+                src="{{ $preview.RelPermalink }}" 
+                srcset="{{ $preview.RelPermalink }} 1x, {{ $preview2x.RelPermalink }} 2x" 
+                alt="{{ $preview.Title }}">
         </a>
     </div>
     <div class="case-summary__description">

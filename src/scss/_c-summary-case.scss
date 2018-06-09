@@ -13,31 +13,6 @@
     padding: 0%;
     box-sizing: border-box;
 }
-.case-summary__device-iphone-x {
-    .case-summary__image {
-        padding-left: 6%;
-        padding-top: 6%;
-        padding-right: 6%;
-        padding-bottom: 6%;
-    }
-}
-.case-summary__device-pixel-2-xl {
-    .case-summary__image {
-        padding-left: 5%;
-        padding-top: 14.5%;
-        padding-right: 5%;
-        padding-bottom: 11%;
-    }
-}
-.case-summary__image-link {
-    position: relative;
-    box-shadow: 0px 10px 20px rgba(0,0,10,0.3);
-    border-radius: 50px;
-}
-.case-summary__device {
-    position: absolute;
-    width: 100%;
-}
 .case-summary__graphic {
     position: relative;
     padding-top: 0;
@@ -87,7 +62,7 @@
     .case-summary__image-link {
         &:hover {
             transform: translateY(-30px) rotate(-1deg) scale(1.04);
-            box-shadow: 0px 30px 30px rgba(0,0,10,0.2);
+            box-shadow: 0px 30px 30px rgba(0,0,10,0.2), 0px -30px 30px rgba(0,0,10,0.2) inset;
         }
     }
 }

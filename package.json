@@ -16,7 +16,7 @@
 
     "hugo:build": "hugo",
     "hugo:build-drafts": "hugo -D",
-    "hugo:serve": "hugo server",
+    "hugo:serve": "hugo server --bind=0.0.0.0",
     "hugo:serve-drafts": "hugo server -D --bind=0.0.0.0",
     "hugo:clean": "rm -rf ./public",
 

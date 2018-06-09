@@ -1,0 +1,36 @@
+.case-header {
+}
+
+.case-header__image {
+    position: relative;
+}
+
+.case-header__text {
+
+}
+
+.case-header__headline {
+    margin-top: 0.8em;
+}
+
+.case-header__info {
+    background-color: $color-accent;
+    padding-left: 2px;
+    padding-right: 2px;
+    display: inline-block;
+    margin: 0;
+}
+
+@media all and (min-width: $break-point-m) {
+    .case-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include grid-column-gap;
+    }
+    .case-header__text {
+        align-self: center;
+    }
+    .case-header__image {
+        justify-self: center;
+    }
+}
