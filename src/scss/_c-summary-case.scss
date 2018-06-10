@@ -1,19 +1,11 @@
-.case-summary__graphic {
-    background-color: $color-gray-light;
-}
 .summary__list-element--work {
     margin-bottom: 3em;
     &:last-child {
         margin-bottom: 0;
     }
 }
-.case-summary__image {
-    width: 100%;
-    display: block;
-    padding: 0%;
-    box-sizing: border-box;
-}
 .case-summary__graphic {
+    background-color: $color-gray-light;
     position: relative;
     padding-top: 0;
     padding-left: 64px;
@@ -49,7 +41,9 @@
     .case-summary__image-link {
         &:hover {
             transform: translateY(-30px) rotate(1deg) scale(1.04);
-            box-shadow: 0px 30px 30px rgba(0,0,10,0.2);
+            box-shadow: 
+                0px 30px 30px rgba(0,0,10,0.2),
+                0px -30px 30px rgba(0,0,10,0.2) inset;
         }
     }
 }
@@ -57,12 +51,14 @@
     .case-summary__special {
         transform: rotateZ(-20deg);
         left: 10px;
-        bottom: 80px;
+        top: 10px;
     }
     .case-summary__image-link {
         &:hover {
             transform: translateY(-30px) rotate(-1deg) scale(1.04);
-            box-shadow: 0px 30px 30px rgba(0,0,10,0.2), 0px -30px 30px rgba(0,0,10,0.2) inset;
+            box-shadow: 
+                0px 30px 30px rgba(0,0,10,0.2), 
+                0px -30px 30px rgba(0,0,10,0.2) inset;
         }
     }
 }
@@ -76,8 +72,12 @@
     transition-timing-function: ease-in-out;
     &:hover {
         transition-duration: 0.2s;
-
     }
+}
+
+.case-summary__headline {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
 }
 
 @media not all and (hover:hover) {

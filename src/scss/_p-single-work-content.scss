@@ -1,0 +1,43 @@
+.case-role {
+    text-align: center;
+    align-self: start;
+    background-color: $color-accent;
+    padding-top: 1.5em;
+    padding-bottom: 2.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+.case-flow-highlight {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.case-highlight {
+    background: $color-black;
+}
+
+@media all and (min-width: $break-point-m) {
+    .case-role {
+        margin-top: 5em;
+    }
+}
+
+.highlight {
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
+
+.highlight__content-area {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $content-width;
+    padding-left: 16px;
+    padding-right: 16px;
+}

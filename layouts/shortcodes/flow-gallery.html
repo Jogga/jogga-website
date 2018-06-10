@@ -1,0 +1,22 @@
+{{ $caption := .Get "caption" }}
+{{ $match := .Get "match" }}
+{{ $class := .Get "class" }}
+<figure class="flow-gallery">
+    <div class="gallery-image-container">
+        <div class="gallery-images">
+            {{ $resources := $.Page.Resources.Match $match }}
+            {{ $device := $.Page.Param "preview-device" }}
+            {{ range sort $resources "Name" }}
+                {{ $retinaResource := $.Page.Resources.GetMatch .Params.retina }}
+                <img 
+                    class="gallery-image device-preview__image device-preview__image--{{ $device }}"
+                    src="{{ .RelPermalink }}"
+                    srcset="{{ .RelPermalink }} 1x, {{ $retinaResource.RelPermalink }} 2x"
+                    alt="{{ .Title }}">
+            {{ end }}
+        </div>
+    </div>
+    <figcaption class="gallery-caption">
+        <p class="gallery-caption__paragraph">{{ $caption }}</p>
+    </figcaption>
+</figure>

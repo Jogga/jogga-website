@@ -1,6 +1,11 @@
 .device-preview {
-    box-shadow: 0px 10px 20px rgba(0, 0, 10, 0.3), 0px -10px 20px rgba(0, 0, 10, 0.3) inset;
+    box-shadow: 
+        0px 10px 20px rgba(0, 0, 10, 0.3), 
+        0px -10px 20px rgba(0, 0, 10, 0.3) inset;
     border-radius: 80px;
+}
+.device-preview__image {
+    width: 100%;
 }
 .device-preview__image--iphone-x {
     display: block;
@@ -19,9 +24,4 @@
     -webkit-mask-image: url(/img/device-mask-pixel-2-xl.svg);
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
-}
-.device-preview__device {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
 }
