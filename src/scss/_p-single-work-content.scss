@@ -2,6 +2,7 @@
     text-align: center;
     align-self: start;
     background-color: $color-accent;
+    margin-top: 2em;
     padding-top: 1.5em;
     padding-bottom: 2.5em;
     padding-left: 1.5em;
@@ -9,6 +10,12 @@
     ul {
         list-style-type: none;
         padding: 0;
+    }
+    *:first-child {
+        margin-top: 0;
+    }
+    *:last-child {
+        margin-bottom: 0;
     }
 }
 
