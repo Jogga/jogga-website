@@ -1,44 +1,11 @@
-.case-summary__graphic {
-    background-color: $color-gray-light;
-}
 .summary__list-element--work {
     margin-bottom: 3em;
     &:last-child {
         margin-bottom: 0;
     }
 }
-.case-summary__image {
-    width: 100%;
-    display: block;
-    padding: 0%;
-    box-sizing: border-box;
-}
-.case-summary__device-iphone-x {
-    .case-summary__image {
-        padding-left: 6%;
-        padding-top: 6%;
-        padding-right: 6%;
-        padding-bottom: 6%;
-    }
-}
-.case-summary__device-pixel-2-xl {
-    .case-summary__image {
-        padding-left: 5%;
-        padding-top: 14.5%;
-        padding-right: 5%;
-        padding-bottom: 11%;
-    }
-}
-.case-summary__image-link {
-    position: relative;
-    box-shadow: 0px 10px 20px rgba(0,0,10,0.3);
-    border-radius: 50px;
-}
-.case-summary__device {
-    position: absolute;
-    width: 100%;
-}
 .case-summary__graphic {
+    background-color: $color-gray-light;
     position: relative;
     padding-top: 0;
     padding-left: 64px;
@@ -74,7 +41,9 @@
     .case-summary__image-link {
         &:hover {
             transform: translateY(-30px) rotate(1deg) scale(1.04);
-            box-shadow: 0px 30px 30px rgba(0,0,10,0.2);
+            box-shadow: 
+                0px 30px 30px rgba(0,0,10,0.2),
+                0px -30px 30px rgba(0,0,10,0.2) inset;
         }
     }
 }
@@ -82,12 +51,14 @@
     .case-summary__special {
         transform: rotateZ(-20deg);
         left: 10px;
-        bottom: 80px;
+        top: 10px;
     }
     .case-summary__image-link {
         &:hover {
             transform: translateY(-30px) rotate(-1deg) scale(1.04);
-            box-shadow: 0px 30px 30px rgba(0,0,10,0.2);
+            box-shadow: 
+                0px 30px 30px rgba(0,0,10,0.2), 
+                0px -30px 30px rgba(0,0,10,0.2) inset;
         }
     }
 }
@@ -101,8 +72,15 @@
     transition-timing-function: ease-in-out;
     &:hover {
         transition-duration: 0.2s;
-
     }
+}
+.case-summary__paragraph {
+    margin-top: 0;
+    margin-bottom: 1.2em;
+}
+.case-summary__headline {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
 }
 
 @media not all and (hover:hover) {
@@ -126,14 +104,6 @@
         @include grid-column-gap;
         grid-template-rows: auto;
     }
-    .case-summary__headline {
-        margin-top: 0;
-        margin-bottom: 0.4em;
-    }
-    .case-summary__paragraph {
-        margin-top: 0;
-        margin-bottom: 1.6em;
-    }
     .case-summary--left {
         grid-template-columns: [description-start] 1fr 1fr [graphic-start] 1fr 1fr [description-end] 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr [graphic-end];
         .case-summary__special {
@@ -149,6 +119,12 @@
             top: 50%;
             left: 80px;
         }
+    }
+    .case-summary__headline {
+        margin-top: 0;
+    }
+    .case-summary__paragraph {
+        margin-bottom: 1.6em;
     }
     .case-summary__graphic {
         grid-area: graphic;

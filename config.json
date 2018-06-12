@@ -3,15 +3,13 @@
     "layoutDir": "layouts",
     "publishDir": "public",
     "staticDir": ["static", "content/static"],
-    "ignoreFiles": ["README.md", "LICENSE", "LICENSE.md", "content/static/*"],
-    
+    "ignoreFiles": ["README.md", "LICENSE", "LICENSE.md"],
     "buildDrafts": false,
-
     "title": "Jogga",
-    "baseurl": "https://jogga.co/",
+    "baseurl": "https://jogga.co",
     "languageCode": "en-us",
     "pluralizeListTitles": false,
-    "canonifyurls": false,
+    "canonifyurls": true,
     "permalinks": {
         "blog": "blog/:year/:title/",
         "work": "work/:title/",

@@ -14,20 +14,22 @@
     "js:watch": "npm run js:build-dev -- --watch",
     "js:clean": "rm -rf ./static/js",
 
-    "hugo:build": "hugo",
-    "hugo:build-drafts": "hugo -D",
-    "hugo:serve": "hugo server",
-    "hugo:serve-drafts": "hugo server -D --bind=0.0.0.0",
+    "hugo:build:production": "hugo --config config.json,config-production.json",
+    "hugo:build:staging": "hugo --config config.json,config-staging.json",
+    "hugo:serve": "hugo server --bind=0.0.0.0",
     "hugo:clean": "rm -rf ./public",
 
     "build:clean": "npm run scss:clean && npm run hugo:clean && npm run js:clean",
     "build:beautify": "find ./public -type f -name \"*.html\" -exec js-beautify -f {} -r --type \"html\" -m 0 --no-preserve-newlines \\;",
-    "build:drafts": "npm run build:clean && npm run scss:build && npm run js:build-dev && npm run hugo:build-drafts && npm run build:beautify",
-    "build": "npm run build:clean && npm run scss:build && npm run js:build && npm run hugo:build && npm run build:beautify",
+    "build:staging": "npm run build:clean && npm run scss:build && npm run js:build && npm run hugo:build:staging && npm run build:beautify",
+    "build:production": "npm run build:clean && npm run scss:build && npm run js:build && npm run hugo:build:production && npm run build:beautify",
     
-    "dev:drafts": "concurrently --kill-others \"npm run scss:watch\" \"npm run hugo:serve-drafts\" \"npm run js:watch\"",
+    "dev:drafts": "concurrently --kill-others \"npm run scss:watch\" \"npm run hugo:serve -- -D\" \"npm run js:watch\"",
     "dev": "concurrently --kill others \"npm run scss:watch\" \"npm run hugo:serve\" \"npm run js:watch\"",
     
+    "deploy:staging": "npm run build:staging && firebase use staging && firebase deploy --only hosting",
+    "deploy:production": "npm run build:production && firebase use production && firebase deploy --only hosting",
+
     "content:update": "git submodule update --remote --rebase && git add ./content && git commit -m\"Update content submodule\""
   },
   "repository": {

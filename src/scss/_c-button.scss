@@ -42,7 +42,7 @@
     border: none;
     background-color: $color-black;
     color: white;
-    transition-property: background-color color;
+    transition-property: background-color, color;
     &:hover {
         color: white;
         background-color: $color-accent-dark;

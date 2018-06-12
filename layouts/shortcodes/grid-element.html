@@ -1,0 +1,4 @@
+{{ $class := .Get "class" }}
+{{ $start := .Get "start" }}
+{{ $span := .Get "span" }}
+<div class="{{ $class }} grid__element grid__element--start-{{ $start }} grid__element--span-{{ $span }}">{{ .Inner }}</div>
