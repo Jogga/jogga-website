@@ -1,0 +1,8 @@
+{
+    "baseurl": "https://jogga-staging.firebaseapp.com",
+    "canonifyURLs": true,
+    "enableRobotsTXT": true,
+    "params": {
+        "canonical": false
+    }
+}

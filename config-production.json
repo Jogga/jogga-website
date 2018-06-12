@@ -1,0 +1,9 @@
+{
+    "baseurl": "https://jogga.co",
+    "canonifyURLs": true,
+    "enableRobotsTXT": false,
+    "googleAnalytics": "UA-120681392-1",
+    "params": {
+        "canonical": true
+    }
+}
