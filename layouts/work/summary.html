@@ -1,0 +1,25 @@
+{{ $index := .Scratch.Get "seciton-index" }}
+{{ if eq (mod $index 2) 0 }}
+<article class="case-summary case-summary--left">
+{{ else }}
+<article class="case-summary case-summary--right">
+{{ end }}
+    {{ $preview := .Resources.GetMatch "preview" }}
+    {{ $preview2x := .Resources.GetMatch "preview2x" }}
+    <div class="case-summary__graphic">
+        {{ if isset .Params "special" }}
+        <p class="case-summary__special">{{ .Params.special }}</p>
+        {{ end }}
+        <a class="case-summary__image-link device-preview" href="{{ .Permalink }}">
+            <img class="case-summary__image device-preview__image device-preview__image--{{ .Param "preview-device" }}" 
+                src="{{ $preview.RelPermalink }}" 
+                srcset="{{ $preview.RelPermalink }} 1x, {{ $preview2x.RelPermalink }} 2x" 
+                alt="{{ $preview.Title }}">
+        </a>
+    </div>
+    <div class="case-summary__description">
+        <h3 class="case-summary__headline">{{ .Title }}</a></h3>
+        <p class="case-summary__paragraph">{{ .Description }}</p>
+        <a class="case-summary__button button button--secondary" href="{{ .Permalink }}">View case</a>
+    </div>
+</article>

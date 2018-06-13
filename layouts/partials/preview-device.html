@@ -1,0 +1,9 @@
+{{ $device := .Param "preview-device" }}
+{{ if (eq $device "iphone-x") }}
+{{ $src := "img/device-iphone-x.svg"}}
+<img class="device-preview__device" src="/img/device-iphone-x.svg" alt="iPhone X">
+{{ else if (eq $device "pixel-2-xl") }}
+<img class="device-preview__device" src="/img/device-pixel-2-xl.svg" alt="Pixel 2 XL">
+{{ else }}
+<p>Device not supported</p>
+{{ end }}

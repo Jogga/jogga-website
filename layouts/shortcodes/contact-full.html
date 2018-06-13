@@ -1,0 +1,11 @@
+<p>
+    {{ .Site.Params.contact.name.first }} {{ .Site.Params.contact.name.last }}<br>
+    {{ .Site.Params.contact.address.street }} {{ .Site.Params.contact.address.house }}<br>
+    {{ .Site.Params.contact.address.zipCode }} {{ .Site.Params.contact.address.city }}<br>
+    {{ .Site.Params.contact.address.country }}<br>
+    <span class="js-cipher-mail h-hide">{{ .Site.Params.contact.email }}<br></span>
+    <span class="js-cipher-phone h-hide">{{ .Site.Params.contact.phone }}<br></span>
+    <noscript>
+        <span>{{- .Site.Params.contact.gmail -}}<br></span>
+    </noscript>
+</p>

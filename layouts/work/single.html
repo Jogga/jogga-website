@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article>
+    <div class="top-wrapper">
+        {{ partial "nav.html" . }}
+        <header class="case-header content-area">
+            <div class="case-header__image device-preview">
+                {{ $preview := .Resources.GetMatch "preview" }}
+                {{ $preview2x := .Resources.GetMatch "preview2x" }}
+                <img class="device-preview__image device-preview__image--{{ .Param "preview-device" }}" src="{{ $preview.RelPermalink }}" srcset="{{ $preview.RelPermalink }} 1x, {{ $preview2x.RelPermalink }} 2x" alt="{{ $preview.Title }}">
+            </div>
+            <div class="case-header__text">
+                <p class="case-header__info">
+                    <span>Case Study:</span>
+                    <time>
+                        {{- $startDate := dateFormat "2006" (.Page.Param "project-start") -}}
+                        {{- $endDate := dateFormat "2006" (.Page.Param "project-end") -}}
+                        {{- if eq $startDate $endDate -}}
+                        {{- $endDate -}}
+                        {{- else -}}
+                        {{- $startDate -}}-{{- $endDate -}}
+                        {{- end -}}
+                    </time>
+                </p>
+                <h1 class="case-header__headline">
+                    {{ .Title }}
+                </h1>
+                <p class="post-excerpt">
+                    {{ .Description }}
+                </p>
+            </div>
+        </header>
+    </div>
+    {{ .Content }}
+</article>
+{{ partial "cta.html" . }}
+{{ end }}

@@ -1,0 +1,11 @@
+.post-excerpt {
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+@media all and (min-width: $break-point-m) {
+    .post-excerpt {
+        font-size: 1.6em;
+        line-height: 1.5em;
+    }
+}

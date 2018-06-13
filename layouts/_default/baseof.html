@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "link-font.html" . }}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{ .Description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <meta name="autor" content="{{ .Site.Params.contact.name.first}} {{ .Site.Params.contact.name.last}}">
+    <meta name="keywords" content="{{delimit .Site.Params.keywords ", " }}">
+    {{ if .Site.Params.canonical }}
+    <link href="{{ .Permalink }}" rel="canonical">
+    {{ end }}
+    {{ block "meta-social" . }}
+    {{ partial "meta-twitter.html" . }}
+    {{ partial "meta-facebook.html" . }}
+    {{- end -}}
+    
+    {{ block "meta-favicon" . }}
+    {{ partial "meta-favicon.html" . }}
+    {{- end -}}
+    
+    {{ block "head" . }}
+    {{- end -}}
+</head>
+<body id="top">
+    {{ block "main" . }}
+    {{ end }}
+    {{ partial "footer.html" . }}
+    <script type="text/javascript" src="/js/main.js" async></script>
+    {{ template "_internal/google_analytics.html" . }}
+    {{ block "script" . }}
+    {{ end }}
+</body>
+</html>

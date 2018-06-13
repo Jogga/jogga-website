@@ -1,0 +1,13 @@
+# Mac
+.DS_Store
+
+# Npm
+node_modules
+
+# Generated files
+public
+static/css
+static/js
+
+# Not Licensed for Open Source
+static/font

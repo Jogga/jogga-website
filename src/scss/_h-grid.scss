@@ -1,0 +1,51 @@
+@mixin grid-column-gap($gap: $grid-gap) {
+    grid-column-gap: $gap;
+    column-gap: $gap;
+}
+
+@mixin grid-row-gap($gap: $grid-gap) {
+    grid-row-gap: $gap;
+    row-gap: $gap;
+}
+
+.grid {
+    display: block;
+}
+
+@media all and (min-width: $break-point-m) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        @include grid-column-gap;
+    }
+    .grid__element {
+        grid-column-end: span 6; 
+        >*:first-child {
+            margin-top: 0;
+        }
+        >*:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .grid__element--span-8 {
+        grid-column-end: span 8;
+    }
+    .grid__element--span-4 {
+        grid-column-end: span 4;
+    }
+    .grid__element--span-3 {
+        grid-column-end: span 3;
+    }
+    .grid__element--span-6 {
+        grid-column-end: span 6;
+    }
+    .grid__element--start-1 {
+        grid-column-start: 1;
+    }
+    .grid__element--start-9 {
+        grid-column-start: 9;
+    }
+    .grid__element--start-5 {
+        grid-column-start: 5;
+    }
+}

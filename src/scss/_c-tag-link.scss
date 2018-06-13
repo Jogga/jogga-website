@@ -1,0 +1,39 @@
+.tag-link {
+    display: inline;
+    text-decoration: none;
+    font-style: italic;
+    color: $color-black;
+    border: 1px solid $color-black;
+    text-transform: capitalize;
+    padding: 0px 6px 1px;
+    border-radius: 4px;
+    &:hover {
+        color: $color-accent-dark;
+        border-color: $color-accent-dark;
+    }
+}
+
+.tag-link--quiet {
+    color: $color-gray-medium;
+    border: 1px solid $color-gray-medium-light;
+}
+
+.tag-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+.tag-list__element {
+    display: inline-block;
+    margin-bottom: 0.2em;
+}
+
+@media not all and (hover: hover) { 
+    .tag-link {
+        &:hover {
+            color: $color-gray-medium;
+            border-color: $color-gray-medium-light;
+        }
+    }
+}
