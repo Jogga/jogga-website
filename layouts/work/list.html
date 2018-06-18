@@ -1,0 +1,14 @@
+{{ define "main" }}
+    {{ partial "nav.html" . }}
+    <main class="content-area">
+        {{ .Content }}
+        <ul class="summary__list">
+        {{ range $index, $element := .Pages.ByDate.Reverse }}
+            <li class="summary__list-element summary__list-element--work">
+                {{ .Scratch.Set "seciton-index" $index }}
+                {{ .Render "summary" "test" }}
+            </li>
+        {{ end }}
+        </ul>
+    </main>
+{{ end }}
