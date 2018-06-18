@@ -5,6 +5,9 @@
     margin-bottom: 1.6em;
     figcaption {
         font-style: italic;
+        > *:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
