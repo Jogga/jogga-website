@@ -1,6 +1,6 @@
 {
   "name": "jogga-website",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Jogga's personal site",
   "private": true,
   "scripts": {

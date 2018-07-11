@@ -9,7 +9,7 @@
     "baseurl": "https://jogga.co",
     "languageCode": "en-us",
     "pluralizeListTitles": false,
-    "canonifyurls": true,
+    "canonifyurls": false,
     "permalinks": {
         "blog": "blog/:year/:title/",
         "work": "work/:title/",
@@ -89,7 +89,7 @@
             "gmail": "joggaf@gmail.com",
             "phone": "+49 176 30537735"
         },
-        "availability": "beginning of June 2018",
+        "availability": "beginning of August 2018",
         "keywords": [
             "design", 
             "product design", 

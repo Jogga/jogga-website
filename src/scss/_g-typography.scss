@@ -97,3 +97,10 @@ em {
     font-family: $font-serif;
     font-style: italic;
 }
+
+strong {
+    font-family: $font-serif;
+    font-style: italic;
+    font-weight: 400;
+    background-color: $color-accent;
+}
