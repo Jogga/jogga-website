@@ -34,3 +34,9 @@
 </article>
 {{ partial "cta.html" . }}
 {{ end }}
+{{ define "style" }}
+{{ $style := .Page.Param "style" }}
+{{ if $style }}
+<link rel="stylesheet" href="{{ $style }}">
+{{ end }}
+{{ end }}

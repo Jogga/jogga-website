@@ -1,8 +1,7 @@
 {{ $caption := .Get "caption" }}
 {{ $match := .Get "match" }}
 {{ $class := .Get "class" }}
-<figure class="flow-gallery">
-    <div class="gallery-image-container">
+<figure class="figure-gallery {{ $class }}">
         <div class="gallery-images">
             {{ $resources := $.Page.Resources.Match $match }}
             {{ $device := $.Page.Param "preview-device" }}
@@ -15,7 +14,6 @@
                     alt="{{ .Title }}">
             {{ end }}
         </div>
-    </div>
     <figcaption class="gallery-caption">
         <p class="gallery-caption__paragraph">{{ $caption }}</p>
     </figcaption>
