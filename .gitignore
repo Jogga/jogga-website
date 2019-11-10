@@ -11,3 +11,6 @@ static/js
 
 # Not Licensed for Open Source
 static/font
+
+# Firebase
+.firebase
