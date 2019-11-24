@@ -6,7 +6,7 @@
     {{ $retina := $.Page.Resources.GetMatch $res.Params.retina }}
     <img 
         src="{{ $res.RelPermalink }}"
-        srcset="{{ $res.RelPermalink }} 792w, {{ $retina.RelPermalink }} 1584w"
+        srcset="{{ $res.RelPermalink }} 1x, {{ $retina.RelPermalink }} 2x"
         sizes="(min-width: 960px) 0.6vw, (max-width: 1260px) 792px"
         alt="{{ $res.Title }}">
     <figcaption>
