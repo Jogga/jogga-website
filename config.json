@@ -79,10 +79,10 @@
                 "last": "Fröstl"
             },
             "address": {
-                "street": "Enhuberstraße",
-                "house": "3A",
-                "city": "Munich",
-                "zipCode": "80333",
+                "street": "Wilhelm-Stolze-Str.",
+                "house": "29",
+                "city": "Berlin",
+                "zipCode": "10249",
                 "country": "Germany"
             },
             "email": "uryyb@wbttn.co",
@@ -106,8 +106,26 @@
     "taxonomies": {
         "tag": "tags"
     },
-    "blackfriday": {
-        "extensionsmask": []
+    "markup": {
+        "defaultMarkdownHandler": "blackfriday",
+        "blackFriday": {
+            "angledQuotes": false,
+            "extensions": null,
+            "extensionsMask": null,
+            "footnoteAnchorPrefix": "",
+            "footnoteReturnLinkContents": "",
+            "fractions": true,
+            "hrefTargetBlank": false,
+            "latexDashes": true,
+            "nofollowLinks": false,
+            "noreferrerLinks": false,
+            "plainIDAnchors": true,
+            "skipHTML": false,
+            "smartDashes": true,
+            "smartypants": true,
+            "smartypantsQuotesNBSP": false,
+            "taskLists": true
+        }
     },
     "pygmentsUseClasses": true,
     "disableHugoGeneratorInject": true,
